@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?> <!--Controlla versione appunti-->
+
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<!--Foglio di stile-->
+<?xml-stylesheet type="text/xsl" href="FoglioStile.xsl"?> 
+
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">  <!-- elemento radice, namespace standard TEI -->
+	<teiHeader xml:lang="it">
+		<fileDesc>
+			<titleStmt>
+				<title xml:id='titolo_libro'>
+					Bibliografia. Emilio Zola. - L'assommoir. Paris. Charpentier &amp; Comp. editori L. 3,50.
+                                        
+				</title>
+                                <respStmt>
+                                        <resp>Conversion in TEI 5 by</resp>
+                                        <name xml:id="BL">Beatrice Longhi</name>
+                                </respStmt>
+			</titleStmt>
+                        
+			<editionStmt>
+				<edition n="1">Digital edition - <date when="2024-10">October 2024</date></edition>
+				<respStmt>
+					<resp>Digital edition project coordineted by</resp>
+					<name xml:id="DS">Daria Spampinato</name>
+					<name xml:id="ADS">Antonio Di Silvestro</name>
+				</respStmt>
+				<respStmt>
+					<resp>Encoding model by</resp>
+					<name resp="#DS">Daria Spampinato</name>
+					<name xml:id="LM">Laura Mazzagufo</name>
+					<name xml:id="AMDG">Angelo Mario Del Grosso</name>
+					<name xml:id="DB">Denise Bruno</name>
+				</respStmt>
+				<funder>NextGenerationEU</funder>
+				<funder>Ministero dell'Università e della Ricerca</funder>
+				<funder>Italia Domani - Piano Nazionale di Ripresa e Resilienza</funder>
+				<funder ref="coverlessListOrganization.xml#CNR">CNR - Consiglio Nazionale delle Ricerche</funder>
+				<funder ref="coverlessListOrganization.xml#UniCT">Università di Catania</funder>
+			</editionStmt>
+			<publicationStmt>
+				<!-- Dati di diffusione e distribuzione dell'edizione -->
+                <authority ref="coverlessListOrganization.xml#ISTC">CNR ISTC - Istituto di Scienze e Tecnologie della Cognizione del Consiglio Nazionale delle Ricerche</authority>
+                <authority ref="coverlessListOrganization.xml#UniCT">Università di Catania</authority>
+                <date when="2026">2026</date>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</licence>
+                </availability>
+               
+                <idno type="filename">Farfalla_1877_3_5_Bibliografia.xml</idno>
+                </publicationStmt>
+                        <sourceDesc>
+                              <listBibl xml:id="bibliografiaPrimaria"> <!--Per bibliografia primaria-->
+                                        <biblStruct>
+
+                                                <analytic>
+                                                        <title level="a">Bibliografia. Emilio Zola. - L'assommoir. Paris. Charpentier &amp; Comp. editori L. 3,50.</title>
+                                                        <author ref="coverlessListPerson.xml#nimpha">Nimpha</author>
+                
+                                                </analytic>
+
+                                                <monogr>
+                                                        <title level="j" xml:id="farfalla">La Farfalla</title> 
+                                                        <imprint>
+                                                                <publisher ref="coverlessListOrganization.xml#farfalla">La Farfalla</publisher> 
+                                                                <pubPlace ref="coverlessListPlace.xml#CA">Cagliari</pubPlace>
+                                                                <date when="1877-03-11">11 marzo 1877</date>
+                                                        </imprint>
+                                                        <biblScope unit="volume">3</biblScope>
+                                                        <biblScope unit="issue">5</biblScope>
+                                                        <biblScope unit="page">41</biblScope>
+                                                </monogr>
+
+                                        <relatedItem type="reviewOf">
+                                                
+                                                <biblStruct type="romanzo" xml:id="assommoir">  
+                                                                
+                                                        <monogr>
+                                                                <title level="m" ref="coverlessListWork.xml#assommoir">Assommoir</title>
+                                                                <author xml:id="zola" ref="coverlessListPerson.xml#emileZola">Émile Zola</author>
+                                                                        <imprint>
+                                                                                <publisher ref="coverlessListOrganization.xml#charpentier">G. Charpentier</publisher> 
+                                                                                <pubPlace ref="coverlessListPlace.xml#PA">Parigi</pubPlace> 
+                                                                                <date when="1877">1877</date>
+                                                                        </imprint>
+                                                        </monogr>
+                                                                
+                                                       
+                                                
+                                                </biblStruct>
+
+                                        </relatedItem>
+                                        
+                                   </biblStruct>      
+                                        
+                              </listBibl> 
+                        </sourceDesc>
+		</fileDesc>
+                
+                <encodingDesc>
+                        <projectDesc>
+                                <p>Codifica realizzata per il progetto PRIN PNRR COVerLeSS (<ref target="http://chroma.cnr.it/progetti/">descrizione onzone</ref>).</p>
+                        </projectDesc>
+                        <editorialDecl>
+                                <hyphenation>
+                                        <p>Si è scelto di rimuovere i trattini di marcatura degli "a capo" in fine riga.</p>
+                                </hyphenation>
+                                <normalization>
+                                        <p>Si è scelto di normalizzare gli spazi tra parola e punteggiatura.</p>
+                                        <p>Si è scelto di mantenere la resa grafica del maiuscolo anche nel testo e di esplicitarne la semantica con l'uso del tag corrispondente.</p>
+                                </normalization>
+                                <punctuation>
+                                        <p>Tutta la punteggiatura nella fonte originale è stata mantenuta e rappresentata usando il carattere corrispondente.</p>
+                                </punctuation>
+                                <quotation>
+                                        <p>Tutti i marcatori delle citazioni sono stati mantenuti e inglobati nel contenuto dell'elemento stesso.</p>
+                                        <p>Si è scelto di usare sempre <tag>quote</tag> per marcare citazioni che l'autore del testo attribuisce a fonti esterne allo stesso; è stato usato <tag>q</tag> per le citazioni implicite.</p>
+                                </quotation>
+                                <p>Si è scelto di usare lo standard anno-mese-giorno per le date.</p>
+                                <interpretation>
+                                        <p>Si è scelto di creare una tassonomia in <tag>textClass</tag> con i principali temi del Verismo riconosciuti nei testi codificati. All'interno del testo, sono state marcate parole e frasi esemplificative di questi temi, ricondotte alle categorie corrispondenti attraverso l'uso del tag <tag>ref</tag>.</p>
+                                        <p>Le abbreviazioni sono state sciolte e marcate con il tag <tag>choice</tag> e le due alternative, <tag>abbr</tag> ed <tag>expan</tag>.</p>
+                                </interpretation>
+                        </editorialDecl>
+                </encodingDesc>
+
+		<profileDesc>
+                        <textClass>
+                                <keywords>
+                                        <term type="text" subtype="recensione_italiana">Recensione</term>
+                                </keywords>
+                                <keywords scheme="#themesTaxonomy">
+                                        <term type="themes" ref="coverlessTassonomia.xml#classiUmili">Classi umili</term>
+                                </keywords>
+                        </textClass>
+            
+                        
+                        
+                        <creation>
+                                <date when="1877-03-11">11 marzo 1877</date>
+                                <placeName ref="coverlessListPlace.xml#CA">Cagliari</placeName>
+                        </creation> 
+                        
+                        <abstract>
+                                <p>Questo testo firmato "Nimpha" e intitolato "Bibliografia. Emilio Zola. - L'assommoir. Paris. Charpentier &amp; Comp. editori L. 3,50." recensisce il romanzo l'"Assommoir" di Émile Zola commentandone alcuni episodi significativi e invitando i lettori, specialmente i politici e i filosofi, a prestare ascolto all'avvertimento dello scrittore riguardo la deriva della società, diversamente da quanto fatto da certe testate giornalistiche moderate.</p>
+                        </abstract>
+
+                        <langUsage>
+                                <language ident="it">Italiano</language>
+                                <language ident="fr">Francese</language>
+                                <language ident="lat">Latino</language>
+                        </langUsage>
+        </profileDesc>
+
+        <revisionDesc>
+                        <change resp="#BL" status="draft" when="2026-06">First draft available in June 2026</change> 
+                        <change resp="#BL" status="draft" when="2026-07">Final draft available in July 2026</change> 
+        </revisionDesc>
+	</teiHeader>
+        
+<!--Per embedded transcription-->   
+        <facsimile>
+                <surfaceGrp n="1">
+                <surface xml:id="s" ulx="24" uly="8" lrx="3382" lry="4947">
+                        <graphic url="Farfalla_1877_3_5_41.jpeg" width="3385px" height="4968px"/> <!--url="Farfalla_1877_3_5_41.tif" per Safari-->
+                        <zone xml:id="z0" ulx="1550" uly="363" lrx="1912" lry="445"/>
+                                
+                        <zone xml:id="st1" ulx="985" uly="548" lrx="1059" lry="598"/> <!--stella1-->
+                                
+                        <zone xml:id="z1" ulx="375" uly="595" lrx="1646" lry="2758"> 
+                                        <zone  xml:id="z1-l1" ulx="462" uly="622" lrx="993" lry="676"/>        <!--inserisci <lb> per zonee in text e aggiungi @facs="id coor di qui"-->
+                                        <zone  xml:id="z1-l2" ulx="450" uly="671" lrx="1681" lry="729"/>
+                                        <zone  xml:id="z1-l3" ulx="383" uly="727" lrx="1673" lry="770"/>
+                                        <zone  xml:id="z1-l4" ulx="379" uly="771" lrx="1655" lry="819"/>
+                                        <zone  xml:id="z1-l5" ulx="380" uly="823" lrx="1671" lry="870"/>
+                                        <zone  xml:id="z1-l6" ulx="376" uly="871" lrx="1647" lry="914"/>
+                                        <zone  xml:id="z1-l7" ulx="452" uly="919" lrx="1670" lry="957"/>
+                                        <zone  xml:id="z1-l8" ulx="381" uly="968" lrx="1674" lry="1007"/>
+                                        <zone  xml:id="z1-l9" ulx="389" uly="1014" lrx="1662" lry="1061"/>
+                                        <zone  xml:id="z1-l10" ulx="389" uly="1066" lrx="1659" lry="1107"/>
+                                        <zone  xml:id="z1-l11" ulx="391" uly="1120" lrx="1283" lry="1151"/>
+                                        <zone  xml:id="z1-l12" ulx="454" uly="1164" lrx="1661" lry="1204"/>
+                                        <zone  xml:id="z1-l13" ulx="384" uly="1209" lrx="1664" lry="1252"/>
+                                        <zone  xml:id="z1-l14" ulx="387" uly="1264" lrx="1670" lry="1306"/>
+                                        <zone  xml:id="z1-l15" ulx="386" uly="1312" lrx="1377" lry="1346"/>
+                                        <zone  xml:id="z1-l16" ulx="389" uly="1354" lrx="1654" lry="1401"/>
+                                        <zone  xml:id="z1-l17" ulx="387" uly="1403" lrx="859" lry="1455"/>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                            
+                                        <zone xml:id="z1-l18" ulx="390" uly="1460" lrx="1662" lry="1501"/>
+                                        <zone xml:id="z1-l19" ulx="388" uly="1510" lrx="1661" lry="1541"/>
+                                        <zone xml:id="z1-l20" ulx="386" uly="1550" lrx="1655" lry="1592" />
+                                        <zone xml:id="z1-l21" ulx="392" uly="1600" lrx="931" lry="1642"/>
+
+                                        <zone xml:id="z1-l22" ulx="395" uly="1651" lrx="1661" lry="1688"/>
+                                        <zone xml:id="z1-l23" ulx="392" uly="1693" lrx="1664" lry="1734"/>
+                                        <zone xml:id="z1-l24" ulx="394" uly="1741" lrx="1658" lry="1782"/>
+                                        <zone xml:id="z1-l25" ulx="394" uly="1789" lrx="1658" lry="1831"/>
+                                        <zone xml:id="z1-l26" ulx="390" uly="1833" lrx="1655" lry="1881"/>
+                                        <zone xml:id="z1-l27" ulx="387" uly="1886" lrx="1276" lry="1932"/>
+                                        <zone xml:id="z1-l28" ulx="396" uly="1941" lrx="1666" lry="1983"/>
+                                        <zone xml:id="z1-l29" ulx="394" uly="1984" lrx="743" lry="2032"/>
+                                        <zone xml:id="z1-l30" ulx="458" uly="2030" lrx="1661" lry="2081"/>
+                                        <zone xml:id="z1-l31" ulx="387" uly="2090" lrx="1667" lry="2129"/>
+                                        <zone xml:id="z1-l32" ulx="384" uly="2134" lrx="1665" lry="2174"/>
+                                        <zone xml:id="z1-l33" ulx="379" uly="2175" lrx="1673" lry="2227"/>
+                                        <zone xml:id="z1-l34" ulx="381" uly="2230" lrx="989" lry="2276"/>
+                                        
+                                        <zone xml:id="z1-l35" ulx="387" uly="2281" lrx="1681" lry="2318"/>
+                                        <zone xml:id="z1-l36" ulx="392" uly="2322" lrx="1196" lry="2369"/>
+                                        <zone xml:id="z1-l37" ulx="393" uly="2371" lrx="1680" lry="2416"/>
+                                        <zone xml:id="z1-l38" ulx="394" uly="2418" lrx="1678" lry="2462"/>
+                                        <zone xml:id="z1-l39" ulx="394" uly="2467" lrx="1680" lry="2511"/>
+                                        <zone xml:id="z1-l40" ulx="396" uly="2516" lrx="1681" lry="2555"/>
+                                        <zone xml:id="z1-l41" ulx="387" uly="2561" lrx="1672" lry="2612"/>
+                                        
+                                        <zone xml:id="z1-l42" ulx="390" uly="2619" lrx="1670" lry="2665" />
+                                        <zone xml:id="z1-l43" ulx="390" uly="2672" lrx="1666" lry="2707"/>
+                                        <zone xml:id="z1-l44" ulx="390" uly="2711" lrx="928" lry="2762"/>
+                                        
+                                        
+                        </zone>
+                                
+                                <zone xml:id="st2" ulx="983" uly="2756" lrx="1058" lry="2811"/> <!--stella2-->
+                                
+                        <zone xml:id="z2" ulx="347" uly="2796" lrx="1667" lry="4274">
+
+                                        
+                                        <zone xml:id="z2-l1" ulx="385" uly="2835" lrx="1672" lry="2881"/>
+                                        <zone xml:id="z2-l2" ulx="387" uly="2888" lrx="1672" lry="2922"/>
+                                        <zone xml:id="z2-l3" ulx="390" uly="2930" lrx="700" lry="2977" />
+                                        <zone xml:id="z2-l4" ulx="389" uly="2984" lrx="1674" lry="3024"/>
+
+                                        <zone xml:id="z2-l5" ulx="387" uly="3029" lrx="1674" lry="3070"/>
+                                        <zone xml:id="z2-l6" ulx="385" uly="3074" lrx="1675" lry="3118"/>
+                                        <zone xml:id="z2-l7" ulx="384" uly="3123" lrx="1301" lry="3163"/>
+                                        <zone xml:id="z2-l8" ulx="392" uly="3168" lrx="1674" lry="3214"/>
+                                        <zone xml:id="z2-l9" ulx="392" uly="3219" lrx="1679" lry="3268"/>
+                                        <zone xml:id="z2-l10" ulx="391" uly="3272" lrx="1677" lry="3318"/>
+
+                                        <zone xml:id="z2-l11" ulx="392" uly="3327" lrx="1679" lry="3360"/>
+                                        <zone xml:id="z2-l12" ulx="391" uly="3368" lrx="1677" lry="3411"/>
+                                        <zone xml:id="z2-l13" ulx="391" uly="3419" lrx="1680" lry="3463"/>
+                                        <zone xml:id="z2-l14" ulx="391" uly="3470" lrx="1678" lry="3512"/>
+                                        <zone xml:id="z2-l15" ulx="394" uly="3514" lrx="1672" lry="3562"/>
+                                                
+                                        <zone xml:id="z2-l16" ulx="391" uly="3565" lrx="810" lry="3608"/>
+                                        <zone xml:id="z2-l17" ulx="394" uly="3616" lrx="1231" lry="3653"/>
+                                        <zone xml:id="z2-l18" ulx="398" uly="3655" lrx="1670" lry="3703"/>
+                                        <zone xml:id="z2-l19" ulx="390" uly="3702" lrx="1199" lry="3749"/>
+                                        <zone xml:id="z2-l20" ulx="396" uly="3756" lrx="1670" lry="3796"/>
+                                        <zone xml:id="z2-l21" ulx="396" uly="3798" lrx="1197" lry="3847"/>
+                                        <zone xml:id="z2-l22" ulx="399" uly="3853" lrx="1669" lry="3892"/>
+                                        <zone xml:id="z2-l23" ulx="394" uly="3899" lrx="1004" lry="3947"/>
+                                                
+                                        <zone xml:id="z2-l24" ulx="394" uly="3953" lrx="1666" lry="3990"/>
+                                        <zone xml:id="z2-l25" ulx="390" uly="3994" lrx="1662" lry="4039" />
+                                        <zone xml:id="z2-l26" ulx="391" uly="4046" lrx="1658" lry="4084" />
+                                        <zone xml:id="z2-l27" ulx="392" uly="4093" lrx="1657" lry="4131"/>
+                                        <zone xml:id="z2-l28" ulx="390" uly="4131" lrx="1656" lry="4179"/>
+                                        <zone xml:id="z2-l29" ulx="393" uly="4193" lrx="1664" lry="4230"/>
+                                        <zone xml:id="z2-l30" ulx="394" uly="4237" lrx="866" lry="4292"/>
+                                        
+                        </zone>
+                        <!--Le zone 3 e 4 sono dello stesso paragrafo-->
+                                
+                        <zone xml:id="st3" ulx="990" uly="4282" lrx="1052" lry="4332"/> <!--stella3-->
+                                
+                        <zone xml:id="z3" ulx="345" uly="4320" lrx="1673" lry="4581">
+                                
+                                        
+                                        <zone xml:id="z3-l1" ulx="396" uly="4342" lrx="1654" lry="4389"/>
+                                        <zone xml:id="z3-l2" ulx="395" uly="4389" lrx="1650" lry="4435"/>
+                                        <zone xml:id="z3-l3" ulx="397" uly="4446" lrx="1655" lry="4483"/>
+                                        <zone xml:id="z3-l4" ulx="392" uly="4495" lrx="1658" lry="4535"/>
+                                        <zone xml:id="z3-l5" ulx="392" uly="4542" lrx="1666" lry="4581"/>
+
+                        </zone>
+                        <zone xml:id="z4" ulx="1758" uly="503" lrx="3067" lry="1670">
+                               
+                                        
+                                        <zone xml:id="z4-l1" ulx="1779" uly="536" lrx="3047" lry="574"/>
+                                        <zone xml:id="z4-l2" ulx="1777" uly="582" lrx="3054" lry="629"/>
+                                        <zone xml:id="z4-l3" ulx="1771" uly="633" lrx="3057" lry="669"/>
+                                        <zone xml:id="z4-l4" ulx="1775" uly="677" lrx="3059" lry="726"/>
+
+                                        <zone xml:id="z4-l5" ulx="1778" uly="730" lrx="3071" lry="771"/>
+                                        <zone xml:id="z4-l6" ulx="1778" uly="776" lrx="3071" lry="820"/>
+                                        <zone xml:id="z4-l7" ulx="1783" uly="824" lrx="3077" lry="869"/>
+
+                                        <zone xml:id="z4-l8" ulx="1782" uly="872" lrx="3080" lry="915"/>
+                                        <zone xml:id="z4-l9" ulx="1783" uly="920" lrx="3064" lry="962"/>
+                                        <zone xml:id="z4-l10" ulx="1783" uly="967" lrx="2430" lry="1015"/>
+
+                                        <zone xml:id="z4-l11" ulx="1786" uly="1023" lrx="3082" lry="1058"/>
+                                        <zone xml:id="z4-l12" ulx="1784" uly="1067" lrx="3040" lry="1113"/>
+                                        <zone xml:id="z4-l13" ulx="1786" uly="1114" lrx="3043" lry="1157"/>
+                                        <zone xml:id="z4-l14" ulx="1786" uly="1163" lrx="3045" lry="1205"/>
+
+                                        <zone xml:id="z4-l15" ulx="1779" uly="1208" lrx="3051" lry="1251"/>
+                                        <zone xml:id="z4-l16" ulx="1785" uly="1256" lrx="3059" lry="1302"/>
+                                        <zone xml:id="z4-l17" ulx="1782" uly="1309" lrx="3061" lry="1351"/>
+                                        <zone xml:id="z4-l18" ulx="1781" uly="1361" lrx="3062" lry="1405"/>   
+                                        <zone xml:id="z4-l19" ulx="1784" uly="1413" lrx="3050" lry="1449"/>
+                                        <zone xml:id="z4-l20" ulx="1786" uly="1454" lrx="3054" lry="1494"/>
+                                        <zone xml:id="z4-l21" ulx="1789" uly="1503" lrx="3051" lry="1550"/>
+                                        <zone xml:id="z4-l22" ulx="1786" uly="1557" lrx="1942" lry="1607"/>
+                                        <zone xml:id="z4-l23" ulx="1783" uly="1615" lrx="2527" lry="1654"/>
+                                          
+                        </zone>
+                                
+                                <zone xml:id="st4" ulx="2374" uly="1689" lrx="2442" lry="1740"/> <!--stella4-->
+
+                        <zone xml:id="z5" ulx="1760" uly="1731" lrx="3099" lry="3215">
+                                        
+                                        <zone xml:id="z5-l1" ulx="1782" uly="1779" lrx="3072" lry="1821"/>
+                                        <zone xml:id="z5-l2" ulx="1785" uly="1831" lrx="3069" lry="1876"/>
+                                        <zone xml:id="z5-l3" ulx="1786" uly="1881" lrx="3075" lry="1924"/>
+                                        <zone xml:id="z5-l4" ulx="1786" uly="1928" lrx="3073" lry="1971"/>
+                                        <zone xml:id="z5-l5" ulx="1779" uly="1973" lrx="3075" lry="2028"/>
+                                        <zone xml:id="z5-l6" ulx="1780" uly="2036" lrx="3075" lry="2069"/>
+
+                                        <zone xml:id="z5-l7" ulx="1776" uly="2074" lrx="3072" lry="2111"/>
+                                        <zone xml:id="z5-l8" ulx="1773" uly="2124" lrx="3074" lry="2165"/>
+                                        <zone xml:id="z5-l9" ulx="1774" uly="2178" lrx="2646" lry="2220"/>
+                                        <zone xml:id="z5-l10" ulx="1772" uly="2223" lrx="3068" lry="2264"/>
+                                        <zone xml:id="z5-l11" ulx="1773" uly="2267" lrx="3076" lry="2312"/>
+                                        <zone xml:id="z5-l12" ulx="1771" uly="2310" lrx="3080" lry="2357"/>
+                                        <zone xml:id="z5-l13" ulx="1770" uly="2361" lrx="3085" lry="2412"/>
+                                        <zone xml:id="z5-l14" ulx="1766" uly="2414" lrx="3086" lry="2457"/>
+                                        <zone xml:id="z5-l15" ulx="1766" uly="2462" lrx="3086" lry="2504"/>
+                                        <zone xml:id="z5-l16" ulx="1765" uly="2510" lrx="2644" lry="2552"/>
+                                        <zone xml:id="z5-l17" ulx="1760" uly="2556" lrx="3091" lry="2602"/>
+                                        <zone xml:id="z5-l18" ulx="1767" uly="2606" lrx="3092" lry="2651"/>
+                                        <zone xml:id="z5-l19" ulx="1768" uly="2655" lrx="3091" lry="2703"/>
+                                        <zone xml:id="z5-l20" ulx="1768" uly="2708" lrx="3090" lry="2749"/>
+                                        <zone xml:id="z5-l21" ulx="1766" uly="2756" lrx="3095" lry="2799"/>
+                                        <zone xml:id="z5-l22" ulx="1770" uly="2807" lrx="3091" lry="2846" />
+                                        <zone xml:id="z5-l23" ulx="1768" uly="2852" lrx="3085" lry="2894"/>
+                                        
+                                        <zone xml:id="z5-l24" ulx="1766" uly="2903" lrx="3086" lry="2948"/>
+                                        <zone xml:id="z5-l25" ulx="1765" uly="2953" lrx="3096" lry="3001"/>
+                                        <zone xml:id="z5-l26" ulx="1754" uly="3003" lrx="3084" lry="3047"/>
+                                        <zone xml:id="z5-l27" ulx="1763" uly="3054" lrx="3087" lry="3091"/>
+                                        <zone xml:id="z5-l28" ulx="1761" uly="3096" lrx="3091" lry="3137"/>
+                                        <zone xml:id="z5-l29" ulx="1761" uly="3145" lrx="2621" lry="3198"/>
+                                        
+                        </zone>
+                                
+                                
+                                <zone xml:id="st5" ulx="2367" uly="3227" lrx="2438" lry="3284"/> <!--stella5-->      
+                                
+                                
+                        <zone xml:id="z6" ulx="1748" uly="3271" lrx="3070" lry="4585">
+                                
+                                        
+                                        <zone xml:id="z6-l1" ulx="1785" uly="3313" lrx="3056" lry="3364"/>
+                                        <zone xml:id="z6-l2" ulx="1785" uly="3372" lrx="3055" lry="3405"/>
+                                        <zone xml:id="z6-l3" ulx="1784" uly="3416" lrx="3058" lry="3456"/>
+                                        <zone xml:id="z6-l4" ulx="1785" uly="3461" lrx="3060" lry="3505"/>
+                                        <zone xml:id="z6-l5" ulx="1791" uly="3508" lrx="3064" lry="3555"/>
+                                        <zone xml:id="z6-l6" ulx="1784" uly="3559" lrx="3068" lry="3605"/>
+                                        <zone xml:id="z6-l7" ulx="1784" uly="3613" lrx="3067" lry="3655"/>
+                                        <zone xml:id="z6-l8" ulx="1783" uly="3657" lrx="3070" lry="3704"/>
+                                        <zone xml:id="z6-l9" ulx="1787" uly="3705" lrx="3069" lry="3744"/>
+                                        <zone xml:id="z6-l10" ulx="1784" uly="3751" lrx="3066" lry="3791"/>
+                                        <zone xml:id="z6-l11" ulx="1786" uly="3797" lrx="2670" lry="3844"/>
+                                        <zone xml:id="z6-l12" ulx="1787" uly="3849" lrx="3067" lry="3892"/>
+                                        <zone xml:id="z6-l13" ulx="1789" uly="3896" lrx="3068" lry="3942"/>
+                                        <zone xml:id="z6-l14" ulx="1787" uly="3946" lrx="3067" lry="3983"/>
+
+                                        <zone xml:id="z6-l15" ulx="1785" uly="3981" lrx="3066" lry="4039"/>
+                                        <zone xml:id="z6-l16" ulx="1786" uly="4040" lrx="3061" lry="4085"/>
+                                        <zone xml:id="z6-l17" ulx="1783" uly="4089" lrx="2382" lry="4139"/>
+                                        <zone xml:id="z6-l18" ulx="1786" uly="4146" lrx="3060" lry="4183"/>
+                                        <zone xml:id="z6-l19" ulx="1788" uly="4187" lrx="3062" lry="4231"/>
+                                        <zone xml:id="z6-l20" ulx="1782" uly="4236" lrx="3063" lry="4282"/>
+                                        <zone xml:id="z6-l21" ulx="1783" uly="4287" lrx="3061" lry="4332"/>
+                                        <zone xml:id="z6-l22" ulx="1782" uly="4338" lrx="3061" lry="4373"/>
+                                        <zone xml:id="z6-l23" ulx="1777" uly="4370" lrx="3066" lry="4420"/>
+                                        
+                                        <zone xml:id="z6-l24" ulx="1775" uly="4424" lrx="1966" lry="4488"/>
+                                        <zone xml:id="z6-l25" ulx="1780" uly="4489" lrx="3075" lry="4519"/>
+                                        <zone xml:id="z6-l26" ulx="1781" uly="4531" lrx="2472" lry="4577"/>
+                                        
+                                        
+                                
+                        </zone>
+                </surface>
+                </surfaceGrp>
+        </facsimile>
+<!--Fine embedded transcription-->
+        
+        
+        
+        
+
+<!--Body-->
+<text type="recensione">
+  <body>
+    <pb n="1" xml:id="Farfalla_1877_0_3_5_41" facs="s"/> 
+      <div type="intestazione">
+        <head type="main" xml:id="titolo_head" rend="uppercase">Bibliografia</head>
+       
+        <head type="subtitle" rend="uppercase" xml:id="sottotitolo_head">Emilio Zola. - L'assommoir. Paris. Charpentier
+          &amp; Comp. editori L. 3,50
+        </head>
+       
+      </div>
+      <cb n="1" xml:id="col_1-p.41"/>
+      <div type="text">
+                                <p xml:id="p0"><lb facs="#z0"/>41</p>
+                                
+                                <metamark function="sectionDivider" xml:id="stella1"><lb facs="#st1"/>*</metamark>
+                                
+                                <div n="1" type="section"> 
+                                <p xml:id="p1" rend="first-line-indented"><lb facs="#z1-l1"/>Vi condenso la <term type="forma_letteraria" subtype="narrazione">favola</term>. </p>
+        <p xml:id="p2"  rend="first-line-indented"><lb facs="#z1-l2"/><persName ref="coverlessListPerson.xml#gervasia" type="fictional">Gervasia</persName> è una bella ragazza: un'<ref target="#classiUmili">operaia</ref> di <placeName ref="coverlessListPlace.xml#PA" type="real">Parigi</placeName>,
+                                                <lb facs="#z1-l3"/>una <ref target="#classiUmili">lavandaia</ref>. <persName type="fictional" ref="coverlessListPerson.xml#augusteLantier">Lantier</persName> è anche <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#augusteLantier">lui</rs> un <ref target="#classiUmili">operaio</ref>; ma 
+                                                <lb facs="#z1-l4"/>un <ref target="#classiUmili">operaio</ref> vizioso il quale, essendo bello e ben fatto,
+                                                <lb facs="#z1-l5"/>vive <q>«de' suoi mezzi personali.»</q> Seduce <persName ref="coverlessListPerson.xml#gervasia" type="fictional">Gervasia</persName>,
+                                                <lb facs="#z1-l6"/>le fa fare un paio di figliuoli, eppoi l'abbandona.</p>
+        <p xml:id="p3" rend="first-line-indented"><lb facs="#z1-l7"/>Sola, sprovveduta, senza risorse, <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#gervasia">questa donna</rs> 
+                                                <lb facs="#z1-l8"/>cerca un porto franco nel matrimonio, e diventa mo
+                                                <lb facs="#z1-l9"/>glie regolare d'un altro <ref target="#classiUmili">operaio</ref> certo <persName ref="coverlessListPerson.xml#couprau" type="fictional">Couprau</persName>, che 
+                                                <lb facs="#z1-l10"/>le vuole un bene dell'anima e che la tratta con una 
+                                                <lb facs="#z1-l11"/>squisitezza ed un affetto inenarrabili.</p>
+        <p xml:id="p4" rend="first-line-indented"><lb facs="#z1-l12"/>Vuole sventura che <persName ref="coverlessListPerson.xml#couprau" type="fictional">Couprau</persName> ammali. I pochi ri
+                                                <lb facs="#z1-l13"/>sparmi vanno in fumo: e quando l'ultimo scudo esce
+                                                <lb facs="#z1-l14"/>dalla topaia dell'<rs type="person" subtype="fictional" ref="coverlessListPerson.xml#couprau">infermo</rs>, vi entra invece <persName type="fictional" ref="coverlessListPerson.xml#augusteLantier">Lantier</persName>,
+                                                <lb facs="#z1-l15"/>fiancheggiato di alcune centinaia di lire.</p>
+        <p xml:id="p5" rend="first-line-indented"><lb facs="#z1-l16"/><q>- Vuoi che le godiamo insieme?</q> dice <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#augusteLantier">lui</rs> alla sua 
+                                                        <lb facs="#z1-l17"/><rs type="person" subtype="fictional" ref="coverlessListPerson.xml#gervasia">antica innamorata</rs>.</p>
+        <p xml:id="p6" rend="first-line-indented"><lb facs="#z1-l18"/>La tentazione è più forte di quella problematica 
+                                                <lb facs="#z1-l19"/>virtù femminea di rappezzatura: <persName ref="coverlessListPerson.xml#gervasia" type="fictional">Gervasia</persName> cede e ri
+                                                <lb facs="#z1-l20"/>torna quella che era prima: la <distinct>ganza</distinct> di <persName type="fictional" ref="coverlessListPerson.xml#augusteLantier">Lantier</persName>. </p>
+        <p xml:id="p7" rend="first-line-indented"><lb facs="#z1-l21"/><q>Ma, e <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#couprau">il marito</rs>?</q></p>
+        <p xml:id="p8" rend="first-line-indented"><lb facs="#z1-l22"/><q>Ah</q>! <persName ref="coverlessListPerson.xml#couprau" type="fictional">Couprau</persName>, <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#couprau">il marito</rs>, che è in convalescenza 
+                                                <lb facs="#z1-l23"/>ha bisogno di mangiar bene e ber meglio per <q>«ri
+                                                <lb facs="#z1-l24"/>mettersi in forze.»</q> Motivo per cui accetta l'intervento
+                                                <lb facs="#z1-l25"/>nel suo talamo <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#augusteLantier">dell'amante</rs>, cui domanda un solo cor
+                                                <lb facs="#z1-l26"/>rispettivo: quello di poter ubbriacarsi d'assenzio da 
+                                                <lb facs="#z1-l27"/>sera a mattina e da mattina a sera.</p>
+        <p xml:id="p9" rend="first-line-indented"><lb facs="#z1-l28"/>Creata questa posizione orribile, il <term type="forma_letteraria" subtype="genere_letterario">romanzo</term> va
+                                                <lb facs="#z1-l29"/>innanzi da sè.</p>
+  <p xml:id="p10" rend="first-line-indented"><lb facs="#z1-l30"/><persName ref="coverlessListPerson.xml#couprau" type="fictional">Couprau</persName> beve alle spalle <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#augusteLantier">dell'amante</rs> di <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#gervasia">sua mo
+                                                <lb facs="#z1-l31"/>glie</rs> e gli fa da mezzano. <persName ref="coverlessListPerson.xml#gervasia" type="fictional">Gervasia</persName> beve e corrompe 
+                                                <lb facs="#z1-l32"/>una sua ragazza di quattordici anni. <persName type="fictional" ref="coverlessListPerson.xml#augusteLantier">Lantier</persName> beve, 
+                                                <lb facs="#z1-l33"/>ma si stanca alla perfine di <persName ref="coverlessListPerson.xml#gervasia" type="fictional">Gervasia</persName> e fa sua la mo
+                                                <lb facs="#z1-l34"/>glie d'un vicino di casa.</p>
+      <p xml:id="p11" rend="first-line-indented"><lb facs="#z1-l35"/>- Ma che cosa vuoi ch'io faccia senza di te? -
+                                                <lb facs="#z1-l36"/>- gli grida un giorno <persName ref="coverlessListPerson.xml#gervasia" type="fictional">Gervasia</persName>.</p>
+      <p xml:id="p12" rend="first-line-indented"><lb facs="#z1-l37"/>- Non hai di meglio - risponde <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#augusteLantier">lui</rs> - che ac
+                                                <lb facs="#z1-l38"/>cettare le profferte d'amore che con tanta insistenza 
+                                                <lb facs="#z1-l39"/>ti va facendo <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#couprau">il monatto</rs> che sta al terzo piano...</p>
+      <p xml:id="p13" rend="first-line-indented"><lb facs="#z1-l40"/>E <persName type="fictional" ref="coverlessListPerson.xml#augusteLantier">Lantier</persName> conduce nella stamberga del beccamorti 
+                                                <lb facs="#z1-l41"/>l'amorosa di cui vuole ad ogni costo disfarsi.</p>
+      <p xml:id="p14" rend="first-line-indented"><lb facs="#z1-l42"/>Inutile aggiugere che le catastrofi del <term type="forma_letteraria" subtype="genere_letterario">romanzo</term> 
+                                                <lb facs="#z1-l43"/>vanno a svilupparsi nelle sale dell'ospedale ed in 
+                                                <lb facs="#z1-l44"/>quella della <placeName ref="coverlessListPlace.xml#morgue" type="real">Morgue</placeName>.</p>
+
+                                </div>
+                                
+                               <metamark function="sectionDivider" xml:id="stella2"><lb facs="#st2"/>*</metamark> 
+                                
+                                
+                                <div n="2" type="section"> 
+<p xml:id="p15" rend="first-line-indented"><lb facs="#z2-l1"/> Qua e là ci sono delle pagine che fanno fremere;
+                                                <lb facs="#z2-l2"/>degli episodii alla cui lettura i capelli si rizzano in
+                                                <lb facs="#z2-l3"/>capo. Udite:</p>
+        <p xml:id="p16" rend="first-line-indented"><lb facs="#z2-l4"/>C'è <persName ref="coverlessListPerson.xml#labe" type="fictional">Labe</persName>. È una fanciulletta di soli otto anni, 
+                                                <lb facs="#z2-l5"/>figlia d'un <ref target="#classiUmili">operaio</ref> perennemente ubbriaco. <persName ref="coverlessListPerson.xml#labe" type="fictional">Labe</persName> non
+                                                <lb facs="#z2-l6"/>ha più sua madre, ed <ref target="#lavoroMinorile">a soli otto anni</ref> deve fare da
+                                                <lb facs="#z2-l7"/>mammaa tre fratellini minori di lei.</p>
+        <p xml:id="p17" rend="first-line-indented"><lb facs="#z2-l8"/>In compenso, suo padre la batte spietatamente
+                                                <lb facs="#z2-l9"/>due volte al giorno. L'operaio ha il vino cattivo e 
+                                                <lb facs="#z2-l10"/>sfoga le sue ire brutali <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#labe">sulla piccina</rs>. <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#labe">Costei</rs>, gra
+                                                <lb facs="#z2-l11"/>cile di complessione si piega sotto quella continua 
+                                                <lb facs="#z2-l12"/>tempesta di botte: dì per dì avvizzisce, s'incurva, 
+                                                <lb facs="#z2-l13"/>reclina. Un bel giorno <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#labe">essa</rs> sta per morire, sotto i 
+                                                <lb facs="#z2-l14"/>colpi più terribili del solito che suo padre <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#labe">le</rs> infligge.</p>
+        <p xml:id="p18" rend="first-line-indented"><lb facs="#z2-l15"/><q>- Alzati, <name type="epithet" subtype="fictional">bestia</name>, se non vuoi che oggi ti finisca!</q>
+-<lb facs="#z2-l16"/> urla l'ebbro...</p>
+        <p xml:id="p19" rend="first-line-indented"><lb facs="#z2-l17"/>Ed alza nuovamente il bastone.</p>
+        <p xml:id="p20" rend="first-line-indented"><lb facs="#z2-l18"/><q>- No, papà, te ne scongiuro, non battermi più...</q></p>
+        <p xml:id="p21" rend="first-line-indented"><lb facs="#z2-l19"/>Ti assicuro che ciò ti spiacerà... </p>
+        <p xml:id="p22" rend="first-line-indented"><lb facs="#z2-l20"/><q>- <foreign xml:lang="fr" rend="italic">Veux tu sauter bête de <name type="epithet" subtype="fictional">rosse</name>!</foreign></q> vocifera il beone.
+                                                <lb facs="#z2-l21"/>E la tempesta d'altre scudisciate.</p>
+        <p xml:id="p23" rend="first-line-indented"><lb facs="#z2-l22"/><q>- Ma non posso alzarmi, mio buon papà!... Sto</q>
+                                                        <lb facs="#z2-l23"/><q>morendo, mi capisci......?</q></p>
+        <p xml:id="p24" rend="first-line-indented"><lb facs="#z2-l24"/><rs type="person" subtype="real" ref="coverlessListPerson.xml#nimpha">Io</rs> scrivo queste zonee, e tengo spiegato innanzi 
+                                                <lb facs="#z2-l25"/>agli occhi il libro dello <persName type="real" ref="coverlessListPerson.xml#emileZola">Zola</persName>, proprio laddove è de
+                                                <lb facs="#z2-l26"/>scritta questa <term type="forma_letteraria" subtype="narrazione">scena</term> orridamente <term type="verbum" subtype="vero_verita">vera</term>. Ebbene: mi
+                                                <lb facs="#z2-l27"/>sento correre un brivido per tutto il corpo, e la fronte 
+                                                <lb facs="#z2-l28"/>mi s'imperla di gocce gelide. A voi dedurre quale e 
+                                                <lb facs="#z2-l29"/>quanta sia la potenza che si racchiude in questo spa
+                                                <lb facs="#z2-l30"/>smodico <term type="forma_letteraria" subtype="genere_letterario">racconto</term>...</p>
+                                </div>
+      
+                               <metamark function="sectionDivider" xml:id="stella3"><lb facs="#st3"/>*</metamark> 
+                                
+                                <div n="3" type="section"> 
+
+<p xml:id="p25" rend="first-line-indented"><lb facs="#z3-l1"/>Dunque <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#couprau">il marito</rs>, <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#gervasia">la moglie</rs>, e <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#augusteLantier">l'amante</rs>, ecco la
+                                                <lb facs="#z3-l2"/><term type="verbum" subtype="evoluzione_sociale">triade sociale</term> su cui <persName type="real" ref="coverlessListPerson.xml#emileZola">Emilio Zola</persName> - <persName type="real" ref="coverlessListPerson.xml#emileZola">Zola</persName> di nome e 
+                                                <lb facs="#z3-l3"/>d'origine italiano - fonda il suo <term type="forma_letteraria" subtype="genere_letterario">romanzo</term> quanto al
+                                                <lb facs="#z3-l4"/>l'<term type="forma_letteraria" subtype="narrazione">intreccio</term>: ma quanto allo <term type="forma_letteraria" subtype="narrazione">sviluppo</term> la <term type="forma_letteraria" subtype="narrazione">presentazione</term> 
+                                                <lb facs="#z3-l5"/>dei <term type="forma_letteraria" subtype="narrazione">protagonisti</term> è ancora più turpe. <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#gervasia">La moglie</rs>  <w lemma="infedele">infe
+                                                <cb n="2" xml:id="col_2-p.41"/>
+                                                <lb facs="#z4-l1"/>dele</w> che passa per la trafila di tutte le sozzure e fi
+                                                <lb facs="#z4-l2"/>nisce ebbra perenne, periodico zimbello ai biricchini
+                                                <lb facs="#z4-l3"/>del sobborgo. <rs type="person" subtype="fictional" ref="coverlessListPerson.xml#couprau">Il marito</rs>, dapprincipio giovane, bello, 
+                                                <lb facs="#z4-l4"/>onesto, che mano mano si ravvolge nel leppo d'ogni
+                                                <lb facs="#z4-l5"/>sozzura e muore all'ospedale vittima del <foreign xml:lang="lat"><emph rend="italic">delirium </emph></foreign>
+<lb facs="#z4-l6"/><foreign xml:lang="lat"><emph rend="italic">tremens</emph></foreign> alcoolico. <persName type="fictional" ref="coverlessListPerson.xml#augusteLantier">Lantier</persName> per ultimo, un volgare 
+<lb facs="#z4-l7"/>seduttore un <name type="epithet" subtype="fictional"><persName type="fictional" ref="coverlessListPerson.xml#monsieurAlphonse">Monsieur Alphonse</persName></name>, finchè è forte e 
+<lb facs="#z4-l8"/>robusto, e che termina col vivere alle spalle delle 
+<lb facs="#z4-l9"/>ultime quadrantarie che popolano gli orridi specchi 
+                                                <lb facs="#z4-l10"/>della moderna <placeName ref="coverlessListPlace.xml#BA" type="real">Babilonia</placeName>... </p>
+        <p xml:id="p26" rend="first-line-indented"><lb facs="#z4-l11"/>Intorno a questa <term type="forma_letteraria" subtype="genere_letterario">trilogia</term> si rannoda la <term type="verbum" subtype="rappresentazione">descrizione</term>
+                                                <lb facs="#z4-l12"/>di tutto il <ref target="#classiUmili">mondo operaio</ref>: de' suoi <term type="verbum" subtype="evoluzione_sociale">costumi</term>, dei suoi 
+                                                <lb facs="#z4-l13"/>fasti, ed anche de' suoi nefasti. Pare di assistere alla
+                                                <lb facs="#z4-l14"/>giornata del lavoratore, del <ref target="#classiUmili">piccolo bottegaio</ref>; e quando 
+                                                <lb facs="#z4-l15"/>siamo al pranzo che <persName ref="coverlessListPerson.xml#gervasia" type="fictional">Gervasia</persName> offre a' suoi vicini,
+                                                <lb facs="#z4-l16"/>senza sapere come pagherà il conto: e quando
+                                                <lb facs="#z4-l17"/>siamo al banchetto di nozze al cui <foreign xml:lang="fr" rend="italic">dessert</foreign> fanno ca
+                                                <lb facs="#z4-l18"/>polino i coltelli perchè la spesa ha oltrepassato di 
+                                                <lb facs="#z4-l19"/>qualche soldo il preventivo - <rs type="person" subtype="real" ref="coverlessListPerson.xml#nimpha">noi</rs> ci domandiamo
+                                                <lb facs="#z4-l20"/>esterrafatti se tutto questo è <term type="forma_letteraria" subtype="autorialita_narrativita">parto fantastico</term> dello
+                                                <lb facs="#z4-l21"/><rs type="person" subtype="real" ref="coverlessListPerson.xml#emileZola">scrittore</rs> o se non piuttosto è la più desolante <term type="verbum" subtype="vero_verita">ve
+                                                <lb facs="#z4-l22"/>rità</term>....</p>
+        <p xml:id="p27" rend="first-line-indented"><lb facs="#z4-l23"/><q>Ed è la <term type="verbum" subtype="vero_verita">verità</term> pur troppo!</q></p>
+                                        
+                                </div> 
+
+      <metamark function="sectionDivider" xml:id="stella4"><lb facs="#st4"/>*</metamark>
+        
+
+                                                <div n="4" type="section"> 
+<p xml:id="p28" rend="first-line-indented"><lb facs="#z5-l1"/>È certo che <name type="epithet" subtype="real">i nemici della democrazia</name> si faranno
+                                                <lb facs="#z5-l2"/>contro di questa un'arma dell'<title rend="italic" ref="coverlessListWork.xml#assommoir">Assommoir</title>. Anzi
+                                                <lb facs="#z5-l3"/>l'hanno già fatto.  Alcuni corrispondenti di fogli mo
+                                                <lb facs="#z5-l4"/>derati italiani, hanno già intonata l'antifona:</p>
+        <p xml:id="p29" rend="first-line-indented"><lb facs="#z5-l5"/><q>- Eccolo il <ref target="#classiUmili">popolo</ref> che voi o repubblicani lisciate,</q> 
+                                                        <lb facs="#z5-l6"/><q>da mattina a sera. Eccovelo in tutta la sua laida</q>
+                                                        <lb facs="#z5-l7"/><q><term type="verbum" subtype="studio_osservazione">realtà</term>! Eccovi come mangiano, bevono, dormono gli</q>
+                                                        <lb facs="#z5-l8"/><q><name type="epithet" subtype="real">eroi</name> delle vostre barricate ! Che cosa volete ritrarne</q>
+                                                        <lb facs="#z5-l9"/><q>da quest'idolo dai piedi di fango...?</q></p>
+        <p xml:id="p30" rend="first-line-indented"><lb facs="#z5-l10"/><q>- Che cosa? -</q> rispondiamo noi. La luce. La luce
+                                                <lb facs="#z5-l11"/>che entra nel <term type="verbum" subtype="evoluzione_sociale">substrato sociale</term>. La luce che mette in 
+                                                <lb facs="#z5-l12"/>fuga i lombrichi che hanno bisogno per vivere delle 
+<lb facs="#z5-l13"/>tenebre. Che cosa...? Il sole che mette in dirotta
+<lb facs="#z5-l14"/>le upupe dei crepacci e le nottole dei comignoli o
+<lb facs="#z5-l15"/>scuri. Che cosa?... L'aria che ossigena l'<term type="verbum" subtype="evoluzione_sociale">ambiente</term> del
+<lb facs="#z5-l16"/>le tombe e le tramuta in sacrarii...</p>
+        <p xml:id="p31" rend="first-line-indented"><lb facs="#z5-l17"/>Si, il <ref target="#classiUmili">popolaccio</ref> è cosi: proprio tale e quale colla
+                                                <lb facs="#z5-l18"/>sua potentissima <term type="forma_letteraria" subtype="autorialita_narrativita">macchina intellettuale</term> <persName type="real" ref="coverlessListPerson.xml#emileZola"><choice><abbr>E<am>.</am></abbr><expan resp="#BL">É<ex>mile</ex></expan></choice> Zola</persName> ce lo 
+                                                <lb facs="#z5-l19"/><term type="verbum" subtype="oggettivita_impersonalita">fotografa</term> in questo volume. <ref target="#conflittoSociale">Ma chi lo ha reso tale..?</ref>
+                                                <lb facs="#z5-l20"/>I vostri <ref target="#classiAgiate">re</ref>, i vostri <ref target="#classiAgiate">imperatori</ref>, i vostri <ref target="#classiAgiate">borghesi</ref>, le 
+                                                <lb facs="#z5-l21"/>vostre spie, i vostri soldati: tutto ciò infine che for
+                                                <lb facs="#z5-l22"/>ma, sorregge, puntella la vostra monarchia, o la vo
+                                                <lb facs="#z5-l23"/>stra repubblica curvata sotto lo stivale di un <name type="epithet" subtype="real">mare
+                                                <lb facs="#z5-l24"/>sciallo</name> battuto. Sì, il <term type="verbum" subtype="arti_visive">quadro</term> di <persName type="real" ref="coverlessListPerson.xml#emileZola">Zola</persName> è nero, tutto, 
+                                                <lb facs="#z5-l25"/>orridamente nero: ma chi vi ha passato su quella 
+                                                <lb facs="#z5-l26"/><term type="verbum" subtype="arti_visive">tinta</term> funerea, o meglio chi cancellandone tutti i <term type="verbum" subtype="arti_visive">co
+                                                <lb facs="#z5-l27"/>lori</term> smaglianti della virtù, ha prodotto quella com
+                                                <lb facs="#z5-l28"/>pleta negazione di riflessi? Chi ha fatto l'ombra nel
+                                                <lb facs="#z5-l29"/>cervello e sul capo del <ref target="#classiUmili">popolo</ref>...?</p>
+                                </div>     
+
+                        <metamark function="sectionDivider" xml:id="stella5"><lb facs="#st5"/>*</metamark>
+                                
+                                <div n="5" type="section"> 
+<p xml:id="p32"  rend="first-line-indented"><lb facs="#z6-l1"/>Il libro di <persName type="real" ref="coverlessListPerson.xml#emileZola">Emilio Zola</persName> è un'orribile disarticola
+                                                <lb facs="#z6-l2"/>zione clinica d'una mascella cariata. L'uomo dell'arte
+                                                <lb facs="#z6-l3"/>sa che l'operazione è spaventevolmente dolorosa, sa
+                                                <lb facs="#z6-l4"/>che nulla di più agevole v'ha che il paziente soc
+                                                <lb facs="#z6-l5"/>comba sotto i ferri: ma ciò non monta. Senza questo
+                                                <lb facs="#z6-l6"/>strazio - che pure può salvare una creatura - nul
+                                                <lb facs="#z6-l7"/>la la salverebbe. La cancrena ha fatti troppo pro
+                                                <lb facs="#z6-l8"/>gressi: il <foreign xml:lang="lat"><emph rend="italic">lupus</emph></foreign> ha divorato mezzo il viso. Dunque
+                                                <lb facs="#z6-l9"/>bruciare e tagliare, tagliare e bruciare. Il <emph rend="italic">bistori</emph> e 
+                                                <lb facs="#z6-l10"/>la <emph rend="italic">pietra infernale</emph>, ecco i due soli serii e sufficienti
+                                                <lb facs="#z6-l11"/>fattori della riabilitazione dei <ref target="#classiUmili">reietti</ref>.</p>
+        <p xml:id="p33" rend="first-line-indented"><lb facs="#z6-l12"/>E <persName type="real" ref="coverlessListPerson.xml#emileZola">Zola</persName> col suo <title rend="italic" ref="coverlessListWork.xml#assommoir">Assommoir</title> ha piantato il <term type="verbum" subtype="studio_osservazione">coltello <lb facs="#z6-l13"/>anatomico</term>
+ nelle viscere dei refrattari, dei <ref target="#classiUmili">proletarii</ref>,
+                                                <lb facs="#z6-l14"/>dei <ref target="#classiUmili">diseredati dalla fortuna</ref>: ha messo a nudo le lo
+                                                <lb facs="#z6-l15"/>ro piaghe: le ha <term type="verbum" subtype="studio_osservazione">classificate</term>, <term type="verbum" subtype="studio_osservazione">spiegate</term>, <term type="verbum" subtype="studio_osservazione">commentate</term>.
+<lb facs="#z6-l16"/>Da questo solo esame, il filosofo, lo statista possono
+<lb facs="#z6-l17"/>indurre i rimedii eroici.</p>
+        <p xml:id="p34"  rend="first-line-indented"><lb facs="#z6-l18"/>Ma c'è di più. Col terribile e cupo <term type="verbum" subtype="evoluzione_sociale">problema so
+                                                <lb facs="#z6-l19"/>ciale</term> che minacciosamente si disegna all'orizzonte,
+                                                <lb facs="#z6-l20"/>il volume dello <persName type="real" ref="coverlessListPerson.xml#emileZola">Zola</persName> è un buco nell'avvenire, un gri
+                                                <lb facs="#z6-l21"/>do dall'arme a bordo di quel vascello del presente
+                                                <lb facs="#z6-l22"/>che spinto dai formidabili venti del destino si va ma
+                                                <lb facs="#z6-l23"/>no mano sprofondando nella dubbiosa notte del fu
+                                                <lb facs="#z6-l24"/>turo....</p>
+        <p xml:id="p35" rend="first-line-indented"><lb facs="#z6-l25"/>Ascoltate, o potenti, la voce della nuova <persName ref="coverlessListPerson.xml#cassandra" type="fictional">Cassan
+                                                <lb facs="#z6-l26"/>dra</persName>, ascoltatela per carit<unclear resp="#BL" cert="high">à</unclear>....</p>
+                                </div>       
+      </div>
+            
+    </body>
+  </text>
+
+</TEI>
