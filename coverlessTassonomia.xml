@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>
+					Lista di entità nominate per i testi codificati in COVerLeSS: temi e tassonomia
+				</title>
+			</titleStmt>
+			<editionStmt>
+				<edition n="1">Digital edition - <date when="2024-10">October 2024</date></edition>
+				<respStmt>
+					<resp>Digital edition project coordineted by</resp>
+					<name xml:id="DS">Daria Spampinato</name>
+					<name xml:id="ADS">Antonio Di Silvestro</name>
+				</respStmt>
+				<respStmt>
+					<resp>Encoding model by</resp>
+					<name resp="#DS">Daria Spampinato</name>
+					<name xml:id="LM">Laura Mazzagufo</name>
+					<name xml:id="AMDG">Angelo Mario Del Grosso</name>
+					<name xml:id="DB">Denise Bruno</name>
+				</respStmt>
+				<funder>NextGenerationEU</funder>
+				<funder>Ministero dell'Università e della Ricerca</funder>
+				<funder>Italia Domani - Piano Nazionale di Ripresa e Resilienza</funder>
+				<funder ref="coverlessListOrganization.xml#CNR">CNR - Consiglio Nazionale delle Ricerche</funder>
+				<funder ref="coverlessListOrganization.xml#UniCT">Università di Catania</funder>
+			</editionStmt>
+			<publicationStmt>
+				<!-- Dati di diffusione e distribuzione dell'edizione -->
+                <authority ref="coverlessListOrganization.xml#ISTC">CNR ISTC - Istituto di Scienze e Tecnologie della Cognizione del Consiglio Nazionale delle Ricerche</authority>
+                <authority ref="coverlessListOrganization.xml#UniCT">Università di Catania</authority>
+                <date when="2025">2025</date>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</licence>
+                </availability>
+                <idno type="filename">coverlessTassonomia.xml</idno>
+			</publicationStmt>
+			<sourceDesc>
+				<p>Born digital.</p>
+			</sourceDesc>
+		</fileDesc>
+
+		<encodingDesc>
+			<classDecl>
+                <taxonomy xml:id="themesTaxonomy">
+					
+					<category xml:id="conflittoSociale">
+                        <catDesc><term type="themes">Conflitto sociale</term>: Riferimenti al conflitto sociale</catDesc>  
+                    </category>
+					
+					<category xml:id="lavoroMinorile">
+						<catDesc><term type="themes">Lavoro minorile</term>: Riferimenti al lavoro minorile</catDesc> 
+					</category>
+							
+					<category xml:id="classiUmili">
+						<catDesc><term type="themes">Classi umili</term>: Riferimenti alle condizioni di vita delle classi umili</catDesc>  
+					</category>
+					
+					<category xml:id="classiAgiate">
+						<catDesc><term type="themes">Classi agiate</term>: Riferimenti alle classi agiate</catDesc>  
+					</category>
+					
+					<category xml:id="giornalismoMilano">
+						<catDesc><term type="themes">Giornalismo Milano</term>: Riferimenti al giornalismo e al giornalismo artistico a Milano</catDesc>  
+					</category>
+					
+					<category xml:id="giornalismoComeBattaglia">
+						<catDesc><term type="themes">Giornalismo come battaglia</term>: Riferimenti al giornalismo come battaglia</catDesc>  
+					</category>
+					
+					<category xml:id="criticaLetteraria">
+						<catDesc><term type="themes">Critica Letteraria</term>: Riferimenti a riflessioni critiche sulla letteratura.</catDesc>
+					</category>
+					
+					<category xml:id="anticonformismo">
+						<catDesc><term type="themes">Anticonformismo</term>: Riferimenti ad atteggiamenti di ribellione e rifiuto delle convenzioni.</catDesc>
+					</category>
+
+                </taxonomy>
+            </classDecl>
+		</encodingDesc>
+
+		<profileDesc>
+            <abstract><p><!-- Qui va inserita una descrizione del contenuto --></p></abstract>
+            <creation></creation>
+        </profileDesc>
+
+        <revisionDesc>
+			<change status="draft" when="2026-07">Final draft available in July 2026</change>
+        </revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<p>This is a template for a minimal TEI header with the mandatory components</p>
+		</body>
+	</text>
+</TEI>
