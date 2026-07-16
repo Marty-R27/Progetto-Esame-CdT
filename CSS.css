@@ -1,0 +1,382 @@
+/* === BLOCCO 1: STRUTTURA PORTANTE, LAYOUT E CORE === */
+
+body {
+  background: rgb(247, 245, 245);
+  max-width: 100%;
+  display: block;
+}
+
+.stella {
+  color: black;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.trattino {
+  color: black;
+  text-align: center;
+}
+
+.persona {
+  font-weight: normal;
+}
+
+.luogo {
+  font-weight: normal;
+}
+
+/* Titolo e autore */
+.autore {
+  visibility: collapse;
+  font-size: 0%;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  display: block;
+}
+
+.title {
+  visibility: collapse;
+  clear: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0%;
+}
+
+/* Intestazioni */
+.head {
+  visibility: visible;
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2.head.main {
+  font-weight: 900;
+}
+
+.sub_head {
+  visibility: visible;
+  margin-top: 5px;
+}
+
+/* Connessione righe e overlay SVG */
+.line-overlay {
+  fill: transparent;
+  stroke: transparent;
+  cursor: pointer;
+}
+
+.line-overlay:hover,
+.line-overlay.highlight {
+  fill: rgb(255, 200, 0, 0.3);
+  stroke: orange;
+}
+
+.text-line.highlight {
+  background-color: #ffe9a8;
+}
+
+span.text-line.highlight {
+  background-color: #ffe9a8 !important;   
+}
+
+span.text-line img {
+  vertical-align: middle;
+  pointer-events: none;
+  display: inline-block;
+}
+
+/* Flexbox */
+
+.edition-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  height: 90vh;
+}
+
+.viewer-pane {
+  position: relative;
+  flex: 1 1 100%;
+  max-width: 55%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.viewer-pane img {
+  max-width: 100%;
+  display: block;
+}
+
+.viewer-pane svg.overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-pane {
+  flex: 1 1 50%;
+  max-width: 30%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.info_p {
+  flex: 1 1 50%;
+  max-width: 15%;
+}
+
+.info_p details img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+}
+
+/* Gestione dello zoomer e della lente d'ingrandimento */
+
+#image-zoomer-box {
+  width: 70%;
+  position: relative;
+  margin-top: 2.5%;
+  margin-left: 10%;
+  padding: 0;
+}
+
+#image-zoomer-box:hover {
+  visibility: visible;
+}
+
+#img-1 {
+  width: 100%;
+  display: block;
+}
+
+#img-2 {
+  display: none;
+  width: 56%;
+  height: 220px;
+  background-size: 300%;
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  border: 2.5px solid white;
+  border-radius: 5%;
+  box-shadow: 0 4px 25px black;
+  z-index: 10;
+}
+
+#image-zoomer-box:hover #img-2 {
+  opacity: 1;
+}
+
+/* Logica attivazione della lente */
+
+body.lens-mode .line-overlay {
+  pointer-events: none;
+}
+
+body.lens-mode #img-2 {
+  display: block;
+}
+
+body:not(.lens-mode) #img-2 {
+  display: none !important;
+}
+
+#mode-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: white;
+  box-shadow: 0 2px 6px rgb(0,0,0,0.3);
+}
+
+/* Impaginazione */
+
+.text-line#text-far2f {
+  display: block;
+  text-align: center;
+}
+
+.text-line#text-far1f {
+  display: block;
+  text-align: center;
+}
+
+p.numero_pagina {
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 1.5px solid rgb(50, 0, 87, 0.3);
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  text-align: center;
+}
+
+/* === BLOCCO 2: INTERATTIVITÀ DEL TESTO === */
+
+/* Abbreviazioni */
+.choice .expan {
+  display: none;
+}
+
+.choice:hover .abbr {
+  display: none;
+}
+
+.choice:hover .expan {
+  display: inline-block;
+}
+
+/* Info entità nominate */
+.view_info {
+  display: none;
+}
+
+.view_info.info-attivo {
+  display: inline-block;
+}
+
+.note-text {
+  text-align: left;
+}
+
+.sub_info {
+  display: none;
+}
+
+.sub_info.sub-attivo {
+  display: inline-block;
+}
+
+.sub-text {
+  text-align: left;
+}
+
+/* Legenda */
+summary::marker {
+  content: "";
+}
+
+summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  color: black;
+  font-size: 0.7em;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+summary {
+  margin-top: 11%;
+  font-weight: bold;
+  font-size: 22.5px;
+}
+
+/* === BLOCCO 3: ENTITÀ NOMINATE E COLORI === */
+
+/* Persone (Rosa) */
+.persona.rosa-attiva, 
+.rs.rosa-attiva {
+  background-color: rgb(241, 133, 236, 0.650);
+}
+
+/* Luoghi (Marrone) */
+.luogo.marrone-attivo, 
+.rs.marrone-attivo {
+  background-color: rgb(129, 79, 4, 0.650);
+}
+
+/* Organizzazioni (Verde) */
+.organizzazione.verde-attivo, 
+.rs.verde-attivo {
+  background-color: rgb(33, 173, 12, 0.650);
+}
+
+/* Opere (Arancione) */
+.opera.arancione-attiva, 
+.rs.arancione-attiva {
+  background-color: rgb(242, 153, 19, 0.650);
+}
+
+/* Termini - Verbum (Viola) */
+.verbum.viola-attiva {
+  background-color: rgb(87, 49, 240, 0.650);
+}
+
+/* Termini - Lessico (Blu) */
+.stile.blu-attivo {
+  background-color: rgb(15, 80, 243, 0.650);
+}
+
+/* Forma Letteraria (Rosso) */
+.forma_letteraria.rosso-attiva, 
+.rosso-attiva {
+  background-color: rgb(205, 30, 30, 0.650);
+}
+
+/* Altre regole */
+.ref.turchese-attivo {
+  background-color: rgb(0, 150, 136, 0.650);
+}
+
+::highlight(riga-evidenziata) {
+  background-color: rgb(255, 200, 0, 0.25);
+}
+
+.text-line {
+  cursor: pointer;
+}
+
+/* === BLOCCO 4: TIPOGRAFIA E IMPAGINAZIONE SPECIFICA === */
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Indentazione primo rigo */
+.first-line-indented {
+  text-indent: 2em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+/* --- REGOLE POESIA --- */
+
+/* Indentazione versi della poesia */
+.indent {
+  padding-left: 2em;
+}
+
+.stanza {
+  margin-bottom: 1.5em;
+}
+
+.right {
+  text-align: right;
+  margin-top: 1rem;
+}

@@ -1,0 +1,386 @@
+.stella {
+    color: black;
+    text-align: center; margin: 1rem 0;
+}
+
+
+
+.text-line#text-far2f {
+    display: block;
+    text-align: center;
+    
+    
+}
+
+.text-line#text-far1f {
+    display: block;
+    text-align: center;
+    
+    
+}
+
+
+/*NEW*/
+
+
+
+span.text-line.highlight {
+    background-color: #ffe9a8 !important;   
+}
+
+span.text-line img {
+    vertical-align: middle;
+    pointer-events: none; /* Prevents the image itself from swallowing clicks */
+    display: inline-block;
+}
+
+/**/
+
+
+footer{
+  
+  
+  
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 1.5px solid rgb(50, 0, 87, 0.3);
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+.autore{
+    visibility: collapse;
+    font-size: 0%;
+    font-weight: bold;
+    color: black;
+    position:relative;
+    
+    display:block;
+}
+.title{
+    visibility: collapse;
+    clear:none;
+    color: black;
+    font-weight: bold;
+    font-size:0%;
+    
+    
+}
+body {
+  background: rgb(247, 245, 245);
+}
+.persona{
+    font-weight: normal;
+}
+.luogo{
+    font-weight: normal;
+}
+
+.head{
+    visibility: visible;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    
+}
+
+.sub_head{
+    visibility: visible;
+    margin-top: 5px;
+    text-transform: uppercase;
+    
+}
+
+/*Connessione righe immagine controlla*/
+.line-overlay {
+  fill: transparent;
+  stroke: transparent;
+  cursor: pointer;
+}
+.line-overlay:hover,
+.line-overlay.highlight {
+  fill: rgba(255, 200, 0, 0.3);
+  stroke: orange;
+}
+.text-line.highlight {
+  background-color: #ffe9a8;
+}
+
+
+/*.viewer-pane { position: relative; display: inline-block; }*/
+.viewer-pane img { width: 100%; display: block; } /*Prima era 45%*/
+.viewer-pane svg.overlay {
+    position: absolute; 
+    z-index: 2;
+    top: 0; left: 0;
+    width: 100%; height: 100%; /* width Prima era 100%*/
+  }
+.line-overlay { fill: transparent; stroke: transparent; cursor: pointer; }
+.line-overlay:hover, .line-overlay.highlight { fill: rgba(255,200,0,0.3); stroke: orange; }
+
+
+p.numero_pagina {
+    text-align: center;
+    width: 100%;
+}
+  /*Fine connessione*/
+
+
+#image-zoomer-box{
+ width:70%;
+ position:relative;
+ /*overflow:hidden;*/
+ margin-top:2.5%;
+ margin-left:10%;
+ padding:0px;
+}
+
+
+#image-zoomer-box:hover{
+ /*transform: scale(1.02);*/
+ visibility: visible;
+}
+
+#img-1{
+ width:100%;
+ display:block;
+}
+
+/*Dimensione lente da rendere responsive*/
+
+#img-2{
+   width:56%;
+   height:220px;
+   background-size: 300%;
+   pointer-events: none;
+   position: absolute;
+   opacity:0;
+   border: 2.5px solid white;
+   border-radius: 5%;
+   box-shadow: 0 8px 25px black;
+   z-index: 10;
+
+}
+
+/*Comparsa graduale lente on hover*/
+#image-zoomer-box:hover #img-2{
+    opacity: 1;
+    
+}
+
+
+
+/*New*/
+/* Default: line-linking mode active, lens disabled */
+#img-2 { display: none; }
+
+/* Lens mode: hide line click targets, show lens */
+body.lens-mode .line-overlay {
+  pointer-events: none;
+}
+body.lens-mode #img-2 {
+  display: block;
+}
+
+/* Line mode (default): lens never shows even on hover */
+body:not(.lens-mode) #img-2 {
+  display: none !important;
+}
+
+#mode-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+
+
+.edition-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.viewer-pane {
+  position:relative;
+  flex: 1 1 100%;
+  max-width: 55%;
+}
+
+.text-pane {
+  flex: 1 1 50%;
+  max-width: 30%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
+.info_p{
+  flex: 1 1 50%;
+  max-width: 15%;
+}
+
+/*Visuallizza colori sulle entità nominate*/
+
+.persona.rosa-attiva {
+  background-color: rgba(241, 133, 236, 0.609);
+}
+
+.luogo.marrone-attivo{
+  background-color: rgba(129, 79, 4, 0.399);
+}
+
+
+.opera.arancione-attiva{
+  background-color: rgba(242, 153, 19, 0.49);
+}
+
+.organizzazione.verde-attivo{
+  background-color: rgba(33, 173, 12, 0.434);
+}
+
+/*Colori term*/
+
+.verismo.viola-attiva {
+  background-color: rgba(87, 49, 240, 0.527);
+}
+
+.lessico.blu-attivo{
+  background-color: rgba(15, 80, 243, 0.541);
+}
+
+.forma_letteraria.rosso-attiva{
+  background-color: rgba(205, 30, 30, 0.579);
+}
+
+/*Temi*/
+
+.tema.celeste-attiva{
+  background-color: #009687;
+}
+
+
+/*Per visualizzazione delle abbreviazioni*/
+
+.choice .expan {
+  display: none;
+}
+
+.choice:hover .abbr {
+  display: none;
+}
+
+.choice:hover .expan {
+  display: inline-block; /*inline1*/
+}
+
+
+
+
+
+/*Ganza*/
+
+/*
+.distinct:hover{
+   
+}*/
+
+
+/*rs*/
+/*
+.rs{
+   
+}*/
+
+
+/*Visualizzazione info sulle entità nominate*/
+
+
+.view_info {
+  display: none;
+}
+
+.view_info.info-attivo {
+  display: inline-block; /*inline1*/
+}
+
+.note-text{
+  text-align:left;
+}
+
+/*Visualizzazione subtype sui term notevoli*/
+
+
+.sub_info {
+  display: none;
+}
+
+.sub_info.sub-attivo {
+  display: inline-block; /*inline1*/
+}
+
+.sub-text{
+  text-align:left;
+}
+
+/*Tema*/
+
+.ta_info {
+  display: none;
+}
+
+.ta_info.ta-attivo {
+  display: inline-block; /*inline1*/
+}
+
+.ta-text{
+  text-align:left;
+}
+
+
+
+/*Legenda*/
+
+
+
+summary::marker{
+   content: "";
+}
+
+summary{
+  margin-top: 11%;
+  font-weight: bold;
+  font-size: 22.5px;
+}
+
+
+
+.first-zone-indented {
+    text-indent: 2em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+#uppercase1{
+    text-transform: uppercase;
+}
+
+#uppercase2{
+    text-transform: uppercase;
+}
