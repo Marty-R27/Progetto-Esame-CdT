@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ilrealismonellarte.xsl"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang="it">
+      <fileDesc>
+         <titleStmt>
+            <title>Il realismo nell'arte</title>
+         <respStmt>
+            <resp>Conversione TEI P5 a cura di</resp>
+            <name xml:id="MR">Martina Ricci</name>
+         </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition n="1">Digital edition - <date when="2026-07">Luglio 2026</date>
+            </edition>
+            <respStmt>
+               <resp>Digital edition project coordinated by</resp>
+               <name xml:id="DS">Daria Spampinato</name>
+               <name xml:id="ADS">Antonio Di Silvestro</name>
+            </respStmt>
+            <respStmt>
+               <resp>Encoding model by</resp>
+               <name resp="#DS">Daria Spampinato</name>
+               <name xml:id="LM">Laura Mazzagufo</name>
+               <name xml:id="AMDG">Angelo Mario Del Grosso</name>
+               <name xml:id="DB">Denise Bruno</name>
+            </respStmt>
+            <funder>NextGenerationEU</funder>
+            <funder>Ministero dell'Università e della Ricerca</funder>
+            <funder>Italia Domani - Piano Nazionale di Ripresa e Resilienza</funder>
+            <funder ref="coverlessListOrganization.xml#CNR">CNR - Consiglio Nazionale delle
+               Ricerche</funder>
+            <funder ref="coverlessListOrganization.xml#UniCT">Università di Catania</funder>
+         </editionStmt>
+         <publicationStmt>
+            <authority ref="coverlessListOrganization.xml#ISTC">CNR ISTC - Istituto di Scienze e
+               Tecnologie della Cognizione del Consiglio Nazionale delle Ricerche</authority>
+            <authority ref="coverlessListOrganization.xml#UniCT">Università di Catania</authority>
+            <date when="2026">2026</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC
+                  4.0</licence>
+            </availability>
+            <idno type="filename">Farfalla_1877_4_4_Ilrealismonellarte.xml</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <listBibl>
+               <biblStruct>
+                  <analytic>
+                     <title level="a">Il realismo nell'arte</title>
+                     <author ref="coverlessListPerson.xml#enricoOnufrio">Enrico Onufrio</author>
+                  </analytic>
+                  <monogr>
+                     <title level="j" xml:id="farfalla">La Farfalla</title>
+                     <imprint>
+                        <publisher ref="coverlessListOrganization.xml#farfalla">La Farfalla</publisher>
+                        <pubPlace ref="coverlessListPlace.xml#CA">Cagliari</pubPlace>
+                        <date when="1877-07-15">15 luglio 1877</date>
+                     </imprint>
+                     <biblScope unit="volume">4</biblScope>
+                     <biblScope unit="issue">4</biblScope>
+                     <biblScope unit="page">44-45</biblScope>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        <projectDesc>
+           <p>Codifica realizzata per il progetto PRIN PNRR COVerLeSS (<ref target="http://chroma.cnr.it/progetti/">descrizione online</ref>).</p>
+        </projectDesc>
+        <editorialDecl>
+           <hyphenation>
+              <p>Si è scelto di rimuovere i trattini di marcatura degli "a capo" in fine riga.</p>
+           </hyphenation>
+           <normalization>
+              <p>Si è scelto di normalizzare gli spazi tra parola e punteggiatura.</p>
+              <p>Si è scelto di mantenere la resa grafica del maiuscolo anche nel testo e di
+                 esplicitarne la semantica con l'uso del tag corrispondente.</p>
+           </normalization>
+           <punctuation>
+              <p>Tutta la punteggiatura nella fonte originale è stata mantenuta e rappresentata
+                 usando il carattere corrispondente.</p>
+           </punctuation>
+           <quotation>
+              <p>Tutti i marcatori delle citazioni sono stati mantenuti e inglobati nel contenuto
+                 dell'elemento stesso.</p>
+              <p>Si è scelto di usare sempre <tag>quote</tag> per marcare citazioni che l'autore
+                 del testo attriuisce a fonti esterne allo stesso; è stato usato <tag>q</tag> per
+                 le citazioni implicite.</p>
+           </quotation>
+           <p>Si è scelto di usare lo standard anno-mese-giorno per le date.</p>
+           <interpretation>
+              <p>Si è scelto di creare una tassonomia in <tag>textClass</tag> con i principali temi
+                 del Verismo riconosciuti nei testi codificati. All'interno del testo, sono state
+                 marcate parole e frasi esemplificative di questi temi, ricondotte alle categorie
+                 corrispondenti attraverso l'uso del tag <tag>ref</tag>.</p>
+              <p>Le abbreviazioni sono state sciolte e marcate con il tag <tag>choice</tag> e le
+                 due alternative, <tag>abbr</tag> ed <tag>expan</tag>.</p>
+           </interpretation>
+        </editorialDecl>
+     </encodingDesc>
+     <profileDesc>
+        <textClass>
+           <keywords>
+              <term type="text" subtype="cronaca_letteraria">Articolo in rivista</term>
+           </keywords>
+			<keywords scheme="#themesTaxonomy">
+              <term type="themes" ref="coverlessTassonomia.xml#criticaLetteraria">Critica Letteraria</term>
+           </keywords>
+        </textClass>
+        <creation>
+           <placeName ref="coverlessListPlace.xml#CA">Cagliari</placeName>
+           <date when="1877-07-15">15 luglio 1877</date>
+        </creation>
+        <abstract>
+           <p>Questo testo, intitolato "Il realismo nell'arte" e firmato "Enrico Onufrio", presenta una riflessione critica sul movimento realista in ambito artistico. L'autore analizza le caratteristiche del realismo, mettendo in evidenza il suo impegno sociale e la sua capacità di rappresentare la vita quotidiana con fedeltà e precisione. Viene fornita una descrizione delle principali opere realiste, evidenziando il loro valore espressivo e il loro impatto culturale. Il testo traccia poi l'evoluzione del realismo nell'arte, dalla sua origine fino ai suoi sviluppi più recenti. L'autore menziona anche le critiche che il movimento ha ricevuto, sottolineando la sua importanza nella storia dell'arte.</p>
+        </abstract>
+        <langUsage>
+           <language ident="it">Italiano</language>
+           <language ident="it-x-800">Italiano di fine Ottocento</language>
+           <language ident="la">Latino</language>
+        </langUsage>
+     </profileDesc>
+     <revisionDesc>
+        <change status="draft" when="2026-06" resp="#MR">First draft June 2026</change>
+         <change status="draft" when="2026-07" resp="#MR">Final draft available in July 2026</change>
+     </revisionDesc>
+  </teiHeader>
+  <facsimile>
+      <surface n="1" xml:id="Farfalla_1877_4_4_45">
+         <graphic url="Farfalla_1877_4_4_45.jpeg" width="3379px" height="4970px" /> <!--Farfalla_1877_4_4_45.tif per Safari-->
+
+         <zone ulx="1497" uly="408" lrx="1834" lry="501" xml:id="Farfalla_1877_4_4_45_pn"/>
+
+         <zone rend="paragraph" points="334,602 1592,597 1600,1822 324,1843" xml:id="Farfalla_1877_4_4_45_p1"/>
+         <zone rend="line" ulx="328" uly="595" lrx="1607" lry="652" xml:id="Farfalla_1877_4_4_45_p1_l1" />
+         <zone rend="line" ulx="326" uly="663" lrx="1599" lry="725" xml:id="Farfalla_1877_4_4_45_p1_l2" />
+         <zone rend="line" ulx="337" uly="736" lrx="1596" lry="794" xml:id="Farfalla_1877_4_4_45_p1_l3" />
+         <zone rend="line" ulx="337" uly="806" lrx="1600" lry="864" xml:id="Farfalla_1877_4_4_45_p1_l4" />
+         <zone rend="line" ulx="320" uly="880" lrx="1610" lry="940" xml:id="Farfalla_1877_4_4_45_p1_l5" />
+         <zone rend="line" ulx="325" uly="952" lrx="1600" lry="1017" xml:id="Farfalla_1877_4_4_45_p1_l6" />
+         <zone rend="line" ulx="335" uly="1028" lrx="1599" lry="1086" xml:id="Farfalla_1877_4_4_45_p1_l7" />
+         <zone rend="line" ulx="326" uly="1107" lrx="1603" lry="1159" xml:id="Farfalla_1877_4_4_45_p1_l8" />
+         <zone rend="line" ulx="324" uly="1176" lrx="1606" lry="1228" xml:id="Farfalla_1877_4_4_45_p1_l9" />
+         <zone rend="line" ulx="328" uly="1250" lrx="1601" lry="1306" xml:id="Farfalla_1877_4_4_45_p1_l10" />
+         <zone rend="line" ulx="326" uly="1323" lrx="1607" lry="1379" xml:id="Farfalla_1877_4_4_45_p1_l11" />
+         <zone rend="line" ulx="327" uly="1398" lrx="1603" lry="1460" xml:id="Farfalla_1877_4_4_45_p1_l12" />
+         <zone rend="line" ulx="327" uly="1479" lrx="1605" lry="1526" xml:id="Farfalla_1877_4_4_45_p1_l13" />
+         <zone rend="line" ulx="331" uly="1554" lrx="1603" lry="1604" xml:id="Farfalla_1877_4_4_45_p1_l14" />
+         <zone rend="line" ulx="323" uly="1625" lrx="1603" lry="1684" xml:id="Farfalla_1877_4_4_45_p1_l15" />
+         <zone rend="line" ulx="327" uly="1704" lrx="1604" lry="1746" xml:id="Farfalla_1877_4_4_45_p1_l16" />
+         <zone rend="line" ulx="322" uly="1764" lrx="774" lry="1824" xml:id="Farfalla_1877_4_4_45_p1_l17" />
+
+         <zone rend="paragraph" points="323,1834 1599,1815 1598,2633 324,2634" xml:id="Farfalla_1877_4_4_45_p2"/>
+         <zone rend="line" ulx="344" uly="1837" lrx="1605" lry="1901" xml:id="Farfalla_1877_4_4_45_p2_l1" />
+         <zone rend="line" ulx="335" uly="1915" lrx="1610" lry="1984" xml:id="Farfalla_1877_4_4_45_p2_l2" />
+         <zone rend="line" ulx="325" uly="1995" lrx="1604" lry="2049" xml:id="Farfalla_1877_4_4_45_p2_l3" />
+         <zone rend="line" ulx="313" uly="2058" lrx="1613" lry="2116" xml:id="Farfalla_1877_4_4_45_p2_l4" />
+         <zone rend="line" ulx="322" uly="2133" lrx="1601" lry="2187" xml:id="Farfalla_1877_4_4_45_p2_l5" />
+         <zone rend="line" ulx="318" uly="2217" lrx="1604" lry="2272" xml:id="Farfalla_1877_4_4_45_p2_l6" />
+         <zone rend="line" ulx="319" uly="2292" lrx="1605" lry="2339" xml:id="Farfalla_1877_4_4_45_p2_l7" />
+         <zone rend="line" ulx="315" uly="2361" lrx="1610" lry="2417" xml:id="Farfalla_1877_4_4_45_p2_l8" />
+         <zone rend="line" ulx="315" uly="2431" lrx="1611" lry="2491" xml:id="Farfalla_1877_4_4_45_p2_l9" />
+         <zone rend="line" ulx="317" uly="2509" lrx="1609" lry="2570" xml:id="Farfalla_1877_4_4_45_p2_l10" />
+         <zone rend="line" ulx="324" uly="2580" lrx="994" lry="2630" xml:id="Farfalla_1877_4_4_45_p2_l11" />
+
+         <zone rend="paragraph" points="324,2631 1599,2627 1601,3515 332,3525" xml:id="Farfalla_1877_4_4_45_p3"/>
+         <zone rend="line" ulx="342" uly="2646" lrx="1619" lry="2707" xml:id="Farfalla_1877_4_4_45_p3_l1" />
+         <zone rend="line" ulx="326" uly="2717" lrx="1599" lry="2793" xml:id="Farfalla_1877_4_4_45_p3_l2" />
+         <zone rend="line" ulx="326" uly="2805" lrx="1609" lry="2866" xml:id="Farfalla_1877_4_4_45_p3_l3" />
+         <zone rend="line" ulx="324" uly="2875" lrx="1608" lry="2929" xml:id="Farfalla_1877_4_4_45_p3_l4" />
+         <zone rend="line" ulx="323" uly="2950" lrx="1601" lry="3009" xml:id="Farfalla_1877_4_4_45_p3_l5" />
+         <zone rend="line" ulx="328" uly="3030" lrx="1602" lry="3080" xml:id="Farfalla_1877_4_4_45_p3_l6" />
+         <zone rend="line" ulx="327" uly="3097" lrx="1603" lry="3154" xml:id="Farfalla_1877_4_4_45_p3_l7" />
+         <zone rend="line" ulx="326" uly="3174" lrx="1600" lry="3227" xml:id="Farfalla_1877_4_4_45_p3_l8" />
+         <zone rend="line" ulx="323" uly="3244" lrx="1608" lry="3300" xml:id="Farfalla_1877_4_4_45_p3_l9" />
+         <zone rend="line" ulx="325" uly="3315" lrx="1605" lry="3366" xml:id="Farfalla_1877_4_4_45_p3_l10" />
+         <zone rend="line" ulx="328" uly="3379" lrx="1612" lry="3435" xml:id="Farfalla_1877_4_4_45_p3_l11" />
+         <zone rend="line" ulx="325" uly="3466" lrx="1482" lry="3514" xml:id="Farfalla_1877_4_4_45_p3_l12" />
+
+         <zone rend="paragraph" points="333,3523 1601,3508 1589,4188 326,4178" xml:id="Farfalla_1877_4_4_45_p4"/>
+         <zone rend="line" ulx="349" uly="3527" lrx="1609" lry="3587" xml:id="Farfalla_1877_4_4_45_p4_l1" />
+         <zone rend="line" ulx="340" uly="3604" lrx="1608" lry="3668" xml:id="Farfalla_1877_4_4_45_p4_l2" />
+         <zone rend="line" ulx="324" uly="3679" lrx="1603" lry="3742" xml:id="Farfalla_1877_4_4_45_p4_l3" />
+         <zone rend="line" ulx="327" uly="3756" lrx="1589" lry="3816" xml:id="Farfalla_1877_4_4_45_p4_l4" />
+         <zone rend="line" ulx="327" uly="3824" lrx="1603" lry="3887" xml:id="Farfalla_1877_4_4_45_p4_l5" />
+         <zone rend="line" ulx="328" uly="3903" lrx="1602" lry="3964" xml:id="Farfalla_1877_4_4_45_p4_l6" />
+         <zone rend="line" ulx="326" uly="3976" lrx="1600" lry="4029" xml:id="Farfalla_1877_4_4_45_p4_l7" />
+         <zone rend="line" ulx="324" uly="4046" lrx="1600" lry="4107" xml:id="Farfalla_1877_4_4_45_p4_l8" />
+         <zone rend="line" ulx="324" uly="4115" lrx="876" lry="4174" xml:id="Farfalla_1877_4_4_45_p4_l9" />
+
+         <zone rend="paragraph" points="336,4189 331,4462 1604,4476 1601,4191" xml:id="Farfalla_1877_4_4_45_p5"/>
+         <zone rend="line" ulx="400" uly="4187" lrx="1608" lry="4254" xml:id="Farfalla_1877_4_4_45_p5_l1" />
+         <zone rend="line" ulx="330" uly="4253" lrx="1604" lry="4336" xml:id="Farfalla_1877_4_4_45_p5_l2" />
+         <zone rend="line" ulx="333" uly="4325" lrx="1601" lry="4404" xml:id="Farfalla_1877_4_4_45_p5_l3" />
+         <zone rend="line" ulx="334" uly="4391" lrx="1601" lry="4478" xml:id="Farfalla_1877_4_4_45_p5_l4" />
+
+         <zone rend="paragraph" points="330,4461 1606,4473 1604,4622 328,4614" xml:id="Farfalla_1877_4_4_45_p6_1"/>
+         <zone rend="line" ulx="335" uly="4473" lrx="1614" lry="4554" xml:id="Farfalla_1877_4_4_45_p6_1_l1" />
+         <zone rend="line" ulx="334" uly="4540" lrx="1606" lry="4619" xml:id="Farfalla_1877_4_4_45_p6_1_l2" />
+
+         <zone rend="paragraph" points="1728,596 2988,593 3000,1250 1730,1252" xml:id="Farfalla_1877_4_4_45_p6_2"/>
+         <zone rend="line" ulx="1729" uly="583" lrx="3005" lry="659" xml:id="Farfalla_1877_4_4_45_p6_2_l1" />
+         <zone rend="line" ulx="1731" uly="659" lrx="3000" lry="727" xml:id="Farfalla_1877_4_4_45_p6_2_l2" />
+         <zone rend="line" ulx="1730" uly="736" lrx="2994" lry="792" xml:id="Farfalla_1877_4_4_45_p6_2_l3" />
+         <zone rend="line" ulx="1729" uly="806" lrx="2988" lry="882" xml:id="Farfalla_1877_4_4_45_p6_2_l4" />
+         <zone rend="line" ulx="1733" uly="888" lrx="2994" lry="952" xml:id="Farfalla_1877_4_4_45_p6_2_l5" />
+         <zone rend="line" ulx="1732" uly="969" lrx="2994" lry="1027" xml:id="Farfalla_1877_4_4_45_p6_2_l6" />
+         <zone rend="line" ulx="1732" uly="1035" lrx="3002" lry="1097" xml:id="Farfalla_1877_4_4_45_p6_2_l7" />
+         <zone rend="line" ulx="1732" uly="1110" lrx="2991" lry="1175" xml:id="Farfalla_1877_4_4_45_p6_2_l8" />
+         <zone rend="line" ulx="1730" uly="1184" lrx="2464" lry="1245" xml:id="Farfalla_1877_4_4_45_p6_2_l9" />
+         
+         <zone rend="paragraph" points="1730,1245 3000,1238 3006,1879 1728,1904" xml:id="Farfalla_1877_4_4_45_p7"/>
+         <zone rend="line" ulx="1737" uly="1253" lrx="3011" lry="1320" xml:id="Farfalla_1877_4_4_45_p7_l1" />
+         <zone rend="line" ulx="1735" uly="1327" lrx="3001" lry="1394" xml:id="Farfalla_1877_4_4_45_p7_l2" />
+         <zone rend="line" ulx="1734" uly="1396" lrx="3000" lry="1460" xml:id="Farfalla_1877_4_4_45_p7_l3" />
+         <zone rend="line" ulx="1724" uly="1475" lrx="2998" lry="1535" xml:id="Farfalla_1877_4_4_45_p7_l4" />
+         <zone rend="line" ulx="1725" uly="1544" lrx="3006" lry="1604" xml:id="Farfalla_1877_4_4_45_p7_l5" />
+         <zone rend="line" ulx="1735" uly="1614" lrx="3002" lry="1670" xml:id="Farfalla_1877_4_4_45_p7_l6" />
+         <zone rend="line" ulx="1734" uly="1682" lrx="3015" lry="1744" xml:id="Farfalla_1877_4_4_45_p7_l7" />
+         <zone rend="line" ulx="1732" uly="1759" lrx="3003" lry="1819" xml:id="Farfalla_1877_4_4_45_p7_l8" />
+         <zone rend="line" ulx="1731" uly="1847" lrx="1951" lry="1897" xml:id="Farfalla_1877_4_4_45_p7_l9" />
+         
+         <zone rend="paragraph" points="1730,1895 3003,1877 3010,2406 1724,2424" xml:id="Farfalla_1877_4_4_45_p8"/>
+         <zone rend="line" ulx="1783" uly="1903" lrx="3013" lry="1979" xml:id="Farfalla_1877_4_4_45_p8_l1" />
+         <zone rend="line" ulx="1723" uly="1981" lrx="3004" lry="2039" xml:id="Farfalla_1877_4_4_45_p8_l2" />
+         <zone rend="line" ulx="1728" uly="2063" lrx="3002" lry="2114" xml:id="Farfalla_1877_4_4_45_p8_l3" />
+         <zone rend="line" ulx="1730" uly="2132" lrx="3002" lry="2202" xml:id="Farfalla_1877_4_4_45_p8_l4" />
+         <zone rend="line" ulx="1730" uly="2213" lrx="3004" lry="2264" xml:id="Farfalla_1877_4_4_45_p8_l5" />
+         <zone rend="line" ulx="1729" uly="2275" lrx="3007" lry="2353" xml:id="Farfalla_1877_4_4_45_p8_l6" />
+         <zone rend="line" ulx="1728" uly="2355" lrx="2905" lry="2412" xml:id="Farfalla_1877_4_4_45_p8_l7" />
+         
+         <zone rend="paragraph" points="1727,2421 3006,2405 3004,3062 1725,3081" xml:id="Farfalla_1877_4_4_45_p9"/>
+         <zone rend="line" ulx="1784" uly="2424" lrx="2999" lry="2499" xml:id="Farfalla_1877_4_4_45_p9_l1" />
+         <zone rend="line" ulx="1731" uly="2501" lrx="3010" lry="2558" xml:id="Farfalla_1877_4_4_45_p9_l2" />
+         <zone rend="line" ulx="1730" uly="2573" lrx="3002" lry="2636" xml:id="Farfalla_1877_4_4_45_p9_l3" />
+         <zone rend="line" ulx="1735" uly="2653" lrx="3008" lry="2713" xml:id="Farfalla_1877_4_4_45_p9_l4" />
+         <zone rend="line" ulx="1731" uly="2721" lrx="2999" lry="2781" xml:id="Farfalla_1877_4_4_45_p9_l5" />
+         <zone rend="line" ulx="1738" uly="2796" lrx="3004" lry="2851" xml:id="Farfalla_1877_4_4_45_p9_l6" />
+         <zone rend="line" ulx="1737" uly="2865" lrx="3017" lry="2926" xml:id="Farfalla_1877_4_4_45_p9_l7" />
+         <zone rend="line" ulx="1738" uly="2942" lrx="3002" lry="2997" xml:id="Farfalla_1877_4_4_45_p9_l8" />
+         <zone rend="line" ulx="1739" uly="3020" lrx="2372" lry="3089" xml:id="Farfalla_1877_4_4_45_p9_l9" />
+         
+         <zone rend="paragraph" points="1729,3080 3006,3065 3005,3444 1735,3454" xml:id="Farfalla_1877_4_4_45_p10"/>
+         <zone rend="line" ulx="1792" uly="3093" lrx="3011" lry="3145" xml:id="Farfalla_1877_4_4_45_p10_l1" />
+         <zone rend="line" ulx="1734" uly="3161" lrx="3010" lry="3218" xml:id="Farfalla_1877_4_4_45_p10_l2" />
+         <zone rend="line" ulx="1738" uly="3237" lrx="3011" lry="3300" xml:id="Farfalla_1877_4_4_45_p10_l3" />
+         <zone rend="line" ulx="1740" uly="3313" lrx="3011" lry="3358" xml:id="Farfalla_1877_4_4_45_p10_l4" />
+         <zone rend="line" ulx="1734" uly="3381" lrx="2530" lry="3446" xml:id="Farfalla_1877_4_4_45_p10_l5" />
+         
+         <zone rend="paragraph" points="1735,3450 3007,3441 3014,3963 1736,3971" xml:id="Farfalla_1877_4_4_45_p11"/>
+         <zone rend="line" ulx="1782" uly="3454" lrx="3000" lry="3514" xml:id="Farfalla_1877_4_4_45_p11_l1" />
+         <zone rend="line" ulx="1730" uly="3528" lrx="3005" lry="3598" xml:id="Farfalla_1877_4_4_45_p11_l2" />
+         <zone rend="line" ulx="1736" uly="3604" lrx="3004" lry="3667" xml:id="Farfalla_1877_4_4_45_p11_l3" />
+         <zone rend="line" ulx="1742" uly="3674" lrx="3000" lry="3749" xml:id="Farfalla_1877_4_4_45_p11_l4" />
+         <zone rend="line" ulx="1739" uly="3757" lrx="3002" lry="3816" xml:id="Farfalla_1877_4_4_45_p11_l5" />
+         <zone rend="line" ulx="1740" uly="3829" lrx="3007" lry="3886" xml:id="Farfalla_1877_4_4_45_p11_l6" />
+         <zone rend="line" ulx="1740" uly="3902" lrx="1980" lry="3970" xml:id="Farfalla_1877_4_4_45_p11_l7" />
+         
+         <zone rend="paragraph" points="1737,3970 3015,3957 3015,4180 1734,4209" xml:id="Farfalla_1877_4_4_45_p12"/>
+         <zone rend="line" ulx="1799" uly="3975" lrx="3007" lry="4038" xml:id="Farfalla_1877_4_4_45_p12_l1" />
+         <zone rend="line" ulx="1739" uly="4044" lrx="3011" lry="4108" xml:id="Farfalla_1877_4_4_45_p12_l2" />
+         <zone rend="line" ulx="1738" uly="4123" lrx="2334" lry="4186" xml:id="Farfalla_1877_4_4_45_p12_l3" />
+
+         <zone points="2429,4305 2433,4362 2923,4354 2917,4306" xml:id="Farfalla_1877_4_4_45_sig"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <pb n="1" xml:id="pb_01" facs="#Farfalla_1877_4_4_45"/>
+         
+         <note type="editorial">I termini marcati all'interno del testo includono volutamente espressioni 
+            "anti-veriste". Questa scelta di codifica è necessaria poiché spesso l'autore definisce il Verismo e 
+            il suo contesto letterario procedendo per contrasto, confrontando e criticando le scelte letterarie 
+            che scadono nel "convenzionale".</note>
+         
+         <div type="intestazione">
+            <head type="main" rend="uppercase">IL REALISMO NELL'ARTE</head>
+            <metamark function="sectionDivider">—</metamark>
+         </div>
+         <cb n="1" xml:id="col_1-p.45"/>
+         <div type="text">
+            <p xml:id="p_1" facs="#Farfalla_1877_4_4_45_p1">
+               <lb n="1" xml:id="p1_l1" facs="#Farfalla_1877_4_4_45_p1_l1"/>come vi dissi più sopra - <q>non l'ho potuto trovare</q>.
+               <lb n="2" xml:id="p1_l2" facs="#Farfalla_1877_4_4_45_p1_l2"/>Noi abbiamo un <term type="forma_letteraria" subtype="ismi">convenzionalismo</term>&#160;<ref target="coverlessTassonomia.xml#criticaLetteraria">freddo</ref>, <ref target="coverlessTassonomia.xml#criticaLetteraria">noioso</ref>, 
+               <lb n="3" xml:id="p1_l3" facs="#Farfalla_1877_4_4_45_p1_l3"/><ref target="coverlessTassonomia.xml#criticaLetteraria">stucchevole</ref>. Abbiamo certi artisti che si creano un 
+               <lb n="4" xml:id="p1_l4" facs="#Farfalla_1877_4_4_45_p1_l4"/>mondo tutto a modo loro con individui fatti di <w lemma="cartapesta">car
+               <lb n="5" xml:id="p1_l5" facs="#Farfalla_1877_4_4_45_p1_l5" break="no"/>tapesta</w> che parlano un linguaggio <term type="stile" subtype="registro">compassato</term> e si 
+               <lb n="6" xml:id="p1_l6" facs="#Farfalla_1877_4_4_45_p1_l6"/>muovono come al <ref target="coverlessTassonomia.xml#criticaLetteraria">teatrino di marionette</ref>. E di questa 
+               <lb n="7" xml:id="p1_l7" facs="#Farfalla_1877_4_4_45_p1_l7"/>guisa che si riesce nel <term type="forma_letteraria" subtype="ismi">convenzionale</term> - Giacchè se 
+               <lb n="8" xml:id="p1_l8" facs="#Farfalla_1877_4_4_45_p1_l8"/>voi volete scrivere un <term type="forma_letteraria" subtype="genere_letterario">idillio</term> di cui fu padrino l'anno 
+               <lb n="9" xml:id="p1_l9" facs="#Farfalla_1877_4_4_45_p1_l9"/>di grazia <date when="1877">milleottocentosettantasette</date>, non dovete 
+               <lb n="10" xml:id="p1_l10" facs="#Farfalla_1877_4_4_45_p1_l10"/>mettervi d'innanzi <persName type="real" ref="coverlessListPerson.xml#teocrito">Teocrito</persName>, <persName type="real" ref="coverlessListPerson.xml#publioVirgilioMarone">Virgilio</persName>, <persName type="real" ref="coverlessListPerson.xml#salomonGessner">Gessner</persName>. Dovete 
+               <lb n="11" xml:id="p1_l11" facs="#Farfalla_1877_4_4_45_p1_l11"/>abolire le zampogne, le <term type="forma_letteraria" subtype="narrazione">ninfe</term>, i <term type="forma_letteraria" subtype="narrazione">pastorelli</term> ingenui e 
+               <lb n="12" xml:id="p1_l12" facs="#Farfalla_1877_4_4_45_p1_l12"/>le <term type="forma_letteraria" subtype="narrazione">pastorelle</term> che fuggono al solo vedere un individuo 
+               <lb n="13" xml:id="p1_l13" facs="#Farfalla_1877_4_4_45_p1_l13"/>del sesso forte. Metteteci piuttosto <term type="forma_letteraria" subtype="narrazione">lui</term> che <ref target="coverlessTassonomia.xml#conflittoSociale">guadagna 
+               <lb n="14" xml:id="p1_l14" facs="#Farfalla_1877_4_4_45_p1_l14"/>poco, che ha la barba ispida</ref> e che <ref target="coverlessTassonomia.xml#anticonformismo">non vuole <w lemma="adattarsi">adat
+               <lb n="15" xml:id="p1_l15" facs="#Farfalla_1877_4_4_45_p1_l15" break="no"/>tarsi</w></ref> a <term type="verbum" subtype="studio_osservazione">contemplare</term> solamente la luna. Fate <w lemma="insomma">insom
+               <lb n="16" xml:id="p1_l16" facs="#Farfalla_1877_4_4_45_p1_l16" break="no"/>ma</w> un <term type="forma_letteraria" subtype="genere_letterario">idillio</term> rimodernizzato e non risuscitate l'<placeName type="fictional" ref="coverlessListPlace.xml#arcadia"><w lemma="arcadia">ar
+               <lb n="17" xml:id="p1_l17" facs="#Farfalla_1877_4_4_45_p1_l17" break="no"/>cadia</w></placeName>, <q>per carità</q>!
+            </p>
+            <p xml:id="p_2" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p2">
+            <lb n="1" xml:id="p2_l1" facs="#Farfalla_1877_4_4_45_p2_l1"/>Lo stesso con i <term type="forma_letteraria" subtype="genere_letterario">romanzi</term> - Taluni credono sul 
+            <lb n="2" xml:id="p2_l2" facs="#Farfalla_1877_4_4_45_p2_l2"/>serio che trasportandoci coi loro <term type="forma_letteraria" subtype="genere_letterario">racconti</term> in un 
+            <lb n="3" xml:id="p2_l3" facs="#Farfalla_1877_4_4_45_p2_l3"/><ref target="coverlessTassonomia.xml#criticaLetteraria">mondo tutto bontà e tutto virtù</ref>, riescano a <w lemma="moralizzare">moraliz
+            <lb n="4" xml:id="p2_l4" facs="#Farfalla_1877_4_4_45_p2_l4" break="no"/>zare</w> la società. È una <ref target="coverlessTassonomia.xml#criticaLetteraria">fisima</ref>, <q>che ci volete fare</q>! -
+            <lb n="5" xml:id="p2_l5" facs="#Farfalla_1877_4_4_45_p2_l5"/>Costoro non sanno che i <term type="forma_letteraria" subtype="genere_letterario">romanzi</term> si sogliono leggere 
+            <lb n="6" xml:id="p2_l6" facs="#Farfalla_1877_4_4_45_p2_l6"/>per passatempo, per pigliar sonno, per divertirsi un 
+            <lb n="7" xml:id="p2_l7" facs="#Farfalla_1877_4_4_45_p2_l7"/>pochino - dello stesso modo che si va al teatro o 
+            <lb n="8" xml:id="p2_l8" facs="#Farfalla_1877_4_4_45_p2_l8"/>si <distinct>giuoca</distinct> al bigliardo. Dopo un giorno che il libro è 
+            <lb n="9" xml:id="p2_l9" facs="#Farfalla_1877_4_4_45_p2_l9"/>letto, si dimentica <term type="forma_letteraria" subtype="narrazione">lui</term>, <term type="forma_letteraria" subtype="narrazione">lei</term> e tutto il resto. Si sono 
+            <lb n="10" xml:id="p2_l10" facs="#Farfalla_1877_4_4_45_p2_l10"/>passate due ore e tanto basta - Questa è la morale 
+            <lb n="11" xml:id="p2_l11" facs="#Farfalla_1877_4_4_45_p2_l11"/>che si ottiene dal <term type="forma_letteraria" subtype="genere_letterario">romanzo</term>.
+            </p>
+            <p xml:id="p_3" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p3">
+            <lb n="1" xml:id="p3_l1" facs="#Farfalla_1877_4_4_45_p3_l1"/>A questo punto però credo utile un'avvertenza.
+            <lb n="2" xml:id="p3_l2" facs="#Farfalla_1877_4_4_45_p3_l2"/>Un <term type="forma_letteraria" subtype="genere_letterario">romanzo</term> piace, quando s'ispira ai tempi che <w lemma="corrono">cor
+            <lb n="3" xml:id="p3_l3" facs="#Farfalla_1877_4_4_45_p3_l3" break="no"/>rono</w>, quando <term type="verbum" subtype="rappresentazione">ritrae</term> la <term type="verbum" subtype="evoluzione_sociale">società contemporanea</term>, <w lemma="quando">quan
+            <lb n="4" xml:id="p3_l4" facs="#Farfalla_1877_4_4_45_p3_l4" break="no"/>do</w>&#160;<term type="verbum" subtype="rappresentazione">mette in evidenza</term>&#160;<term type="verbum" subtype="vero_verita">passioni vere</term>, quando non ci 
+            <lb n="5" xml:id="p3_l5" facs="#Farfalla_1877_4_4_45_p3_l5"/>trasporta in un <ref target="coverlessTassonomia.xml#criticaLetteraria">mondo fittizio</ref>. Ora è tutto ciò che 
+            <lb n="6" xml:id="p3_l6" facs="#Farfalla_1877_4_4_45_p3_l6"/>non si trova in quei <term type="forma_letteraria" subtype="genere_letterario">romanzi</term> che guazzano nel <term type="stile" subtype="lessico"><w lemma="rancidume">ran
+            <lb n="7" xml:id="p3_l7" facs="#Farfalla_1877_4_4_45_p3_l7" break="no"/>cidume</w></term> del <term type="forma_letteraria" subtype="ismi">convenzionalismo</term>. La ragione c'è e <w lemma="proviene">pro
+            <lb n="8" xml:id="p3_l8" facs="#Farfalla_1877_4_4_45_p3_l8" break="no"/>viene</w> da quei signori artisti che vogliono far della 
+            <lb n="9" xml:id="p3_l9" facs="#Farfalla_1877_4_4_45_p3_l9"/>morale. - <q>Il mondo è <term type="stile" subtype="lessico">birbone</term>, la società è corrotta,
+            <lb n="10" xml:id="p3_l10" facs="#Farfalla_1877_4_4_45_p3_l10"/>la fede se n'è <distinct>ita</distinct> a rotta di collo, i giovanotti <w lemma="abborriscono">ab
+            <lb n="11" xml:id="p3_l11" facs="#Farfalla_1877_4_4_45_p3_l11" break="no"/>borriscono</w> il matrimonio, le donne vogliono fare l'<w lemma="esperienza">e
+            <lb n="12" xml:id="p3_l12" facs="#Farfalla_1877_4_4_45_p3_l12" break="no"/>sperienza</w> del noto proverbio: <foreign xml:lang="la"><hi rend="italic">varietas delectat</hi></foreign></q>.
+            </p>
+            <p xml:id="p_4" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p4">
+            <lb n="1" xml:id="p4_l1" facs="#Farfalla_1877_4_4_45_p4_l1"/>.... Ebbene: i novellieri <hi rend="italic">moralisti</hi>&#160;<distinct>mettono da 
+            <lb n="2" xml:id="p4_l2" facs="#Farfalla_1877_4_4_45_p4_l2"/>canto</distinct> l'epoca e la <term type="verbum" subtype="evoluzione_sociale">società moderna</term> e <hi rend="italic">modellano <term type="forma_letteraria" subtype="narrazione">lui</term></hi> 
+            <lb n="3" xml:id="p4_l3" facs="#Farfalla_1877_4_4_45_p4_l3"/>che si vuol maritare ad ogni costo, <term type="forma_letteraria" subtype="narrazione"><hi rend="italic">lei</hi></term> che è un <term type="stile" subtype="lessico"><w lemma="angelo">an
+            <lb n="4" xml:id="p4_l4" facs="#Farfalla_1877_4_4_45_p4_l4" break="no"/>gelo</w> disceso coll'ultimo treno dal paradiso</term> - <q>se nel 
+            <lb n="5" xml:id="p4_l5" facs="#Farfalla_1877_4_4_45_p4_l5"/>l'<term type="forma_letteraria" subtype="narrazione">intreccio</term> c'è un <term type="forma_letteraria" subtype="narrazione"><hi rend="italic">reo</hi></term>, egli dev'essere punito, della 
+            <lb n="6" xml:id="p4_l6" facs="#Farfalla_1877_4_4_45_p4_l6"/>stessa <distinct>guisa</distinct> che il <term type="forma_letteraria" subtype="narrazione">virtuoso</term> poi dev'essere premiato</q>, 
+            <lb n="7" xml:id="p4_l7" facs="#Farfalla_1877_4_4_45_p4_l7"/>e così di seguito - un ammasso di <ref target="coverlessTassonomia.xml#criticaLetteraria">fittizio</ref>, di <term type="forma_letteraria" subtype="ismi"><w lemma="convenzionale">con
+            <lb n="8" xml:id="p4_l8" facs="#Farfalla_1877_4_4_45_p4_l8" break="no"/>venzionale</w></term>, di <term type="forma_letteraria" subtype="ismi">rettorico</term> da far venir la pelle d'oca. 
+            <lb n="9" xml:id="p4_l9" facs="#Farfalla_1877_4_4_45_p4_l9"/>- <q>E a che si riesce</q>?
+            </p>
+            <p xml:id="p_5" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p5">
+            <lb n="1" xml:id="p5_l1" facs="#Farfalla_1877_4_4_45_p5_l1"/>A questo: che mentre i <term type="forma_letteraria" subtype="genere_letterario">romanzi</term> servono <w lemma="comunemente">comune
+            <lb n="2" xml:id="p5_l2" facs="#Farfalla_1877_4_4_45_p5_l2" break="no"/>mente</w> per pigliar sonno, questa sorta di <term type="forma_letteraria" subtype="genere_letterario">romanzi</term> fa 
+            <lb n="3" xml:id="p5_l3" facs="#Farfalla_1877_4_4_45_p5_l3"/>addormentare immediatamente. <q>E spendere tre o <w lemma="quattro">quat
+            <lb n="4" xml:id="p5_l4" facs="#Farfalla_1877_4_4_45_p5_l4" break="no"/>tro</w> lire per un <ref target="coverlessTassonomia.xml#criticaLetteraria">sonnifero</ref> veramente è un po' troppo</q>!
+            </p>
+            <p xml:id="p_6" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p6_1 #Farfalla_1877_4_4_45_p6_2">
+            <lb n="1" xml:id="p6_1_l1" facs="#Farfalla_1877_4_4_45_p6_1_l1"/>E - intendiamoci - <rs type="person" subtype="real" ref="coverlessListPerson.xml#enricoOnufrio">io</rs> non sono <term type="forma_letteraria" subtype="ismi">esclusivista</term>. 
+            <lb n="2" xml:id="p6_1_l2" facs="#Farfalla_1877_4_4_45_p6_1_l2"/>L'artista consideri la natura da qualunque lato egli 
+            <cb n="2" xml:id="col_2-p.45"/><lb n="1" xml:id="p6_2_l1" facs="#Farfalla_1877_4_4_45_p6_2_l1"/> vuole - <term type="verbum" subtype="rappresentazione">ritragga</term> quella parte della società che più 
+            <lb n="2" xml:id="p6_2_l2" facs="#Farfalla_1877_4_4_45_p6_2_l2"/>gli conviene - ciò non importa - purchè sia <w lemma="artista">arti
+            <lb n="3" xml:id="p6_2_l3" facs="#Farfalla_1877_4_4_45_p6_2_l3" break="no"/>sta</w> per davvero. L'<ref target="coverlessTassonomia.xml#criticaLetteraria">idillio</ref> o l'<ref target="coverlessTassonomia.xml#criticaLetteraria">epopea</ref> per <rs type="person" subtype="real" ref="coverlessListPerson.xml#enricoOnufrio">me</rs> sono 
+            <lb n="4" xml:id="p6_2_l4" facs="#Farfalla_1877_4_4_45_p6_2_l4"/>indifferenti - la <ref target="coverlessTassonomia.xml#classiAgiate">società elegante</ref> o la <ref target="coverlessTassonomia.xml#classiUmili">società <w lemma="equivoca">equi
+            <lb n="5" xml:id="p6_2_l5" facs="#Farfalla_1877_4_4_45_p6_2_l5" break="no"/>voca</w></ref> valgono lo stesso. L'artista può <term type="verbum" subtype="rappresentazione">ritrarre</term> quella 
+            <lb n="6" xml:id="p6_2_l6" facs="#Farfalla_1877_4_4_45_p6_2_l6"/>parte di vita che vuole; ma purchè la <term type="verbum" subtype="rappresentazione">ritragga</term> e non 
+            <lb n="7" xml:id="p6_2_l7" facs="#Farfalla_1877_4_4_45_p6_2_l7"/>la <term type="forma_letteraria" subtype="autorialita_narrativita">riformi</term> o la <term type="forma_letteraria" subtype="autorialita_narrativita">crei</term> addirittura - se no si cade nel 
+            <lb n="8" xml:id="p6_2_l8" facs="#Farfalla_1877_4_4_45_p6_2_l8"/><term type="forma_letteraria" subtype="ismi">convenzionale</term> e nel <term type="forma_letteraria" subtype="ismi">rettorico</term> ed un lavoro d'arte fa 
+            <lb n="9" xml:id="p6_2_l9" facs="#Farfalla_1877_4_4_45_p6_2_l9"/>l'<term type="stile" subtype="lessico">ufficio dell'oppio e dell'etere</term>.
+            </p>
+            <p xml:id="p_7" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p7">
+            <lb n="1" xml:id="p7_l1" facs="#Farfalla_1877_4_4_45_p7_l1"/>Ed ora permettete che esprima un'ultima idea. - 
+            <lb n="2" xml:id="p7_l2" facs="#Farfalla_1877_4_4_45_p7_l2"/>Nel romanziere <term type="forma_letteraria" subtype="ismi">realista</term> è certamente più nobile e 
+            <lb n="3" xml:id="p7_l3" facs="#Farfalla_1877_4_4_45_p7_l3"/>più feconda di buoni risultati quell'<term type="forma_letteraria" subtype="autorialita_narrativita">arte battagliera</term> 
+            <lb n="4" xml:id="p7_l4" facs="#Farfalla_1877_4_4_45_p7_l4"/>che, oltre al <term type="verbum" subtype="rappresentazione">ritrarre</term> la società, sa farne la <term type="forma_letteraria" subtype="autorialita_narrativita">critica</term>. 
+            <lb n="5" xml:id="p7_l5" facs="#Farfalla_1877_4_4_45_p7_l5"/>Un <term type="forma_letteraria" subtype="genere_letterario">romanzo</term> non è che un mezzo di diletto, ma, <w lemma="trattato">trat
+            <lb n="6" xml:id="p7_l6" facs="#Farfalla_1877_4_4_45_p7_l6" break="no"/>tato</w> da buoni, anzi da grandi ingegni, esso potrebbe 
+            <lb n="7" xml:id="p7_l7" facs="#Farfalla_1877_4_4_45_p7_l7"/>divenire un <ref target="#conflittoSociale">arnese di lotta</ref> utilissima - potrebbe <w lemma="essere">es
+            <lb n="8" xml:id="p7_l8" facs="#Farfalla_1877_4_4_45_p7_l8" break="no"/>sere</w> la riabilitazione di un <term type="forma_letteraria" subtype="narrazione">tipo</term> o la <term type="verbum" subtype="evoluzione_sociale">condanna di 
+            <lb n="9" xml:id="p7_l9" facs="#Farfalla_1877_4_4_45_p7_l9"/>un vizio</term>.
+            </p>
+            <p xml:id="p_8" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p8">
+            <lb n="1" xml:id="p8_l1" facs="#Farfalla_1877_4_4_45_p8_l1"/>È appunto quest'ultimo genere d'arte che fa <term type="stile" subtype="lessico"><w lemma="arricciare">ar
+            <lb n="2" xml:id="p8_l2" facs="#Farfalla_1877_4_4_45_p8_l2" break="no"/>ricciare</w> il muso</term> a parecchi, anzi a moltissimi. Per 
+            <lb n="3" xml:id="p8_l3" facs="#Farfalla_1877_4_4_45_p8_l3"/>costoro è una <ref target="coverlessTassonomia.xml#criticaLetteraria">indegna profanazione</ref> ciò che si riduce 
+            <lb n="4" xml:id="p8_l4" facs="#Farfalla_1877_4_4_45_p8_l4"/>ad una semplice <term type="verbum" subtype="vero_verita">rivelazione</term>. Essi vorrebbero che si 
+            <lb n="5" xml:id="p8_l5" facs="#Farfalla_1877_4_4_45_p8_l5"/><term type="stile" subtype="lessico">gettasse a manate la cipria</term> su quanto sa di <term type="verbum" subtype="evoluzione_sociale">fetido</term> e 
+            <lb n="6" xml:id="p8_l6" facs="#Farfalla_1877_4_4_45_p8_l6"/>di <term type="verbum" subtype="evoluzione_sociale">cancrenoso</term> e che l'arte sfuggisse la <hi rend="italic">modernità</hi> per 
+            <lb n="7" xml:id="p8_l7" facs="#Farfalla_1877_4_4_45_p8_l7"/><term type="stile" subtype="lessico">gettarsi a corpo perduto</term> nel <term type="forma_letteraria" subtype="ismi">convenzionalismo</term>.
+            </p>
+            <p xml:id="p_9" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p9">
+            <lb n="1" xml:id="p9_l1" facs="#Farfalla_1877_4_4_45_p9_l1"/>Ma questi sforzi a nulla varranno. Nessuno può 
+            <lb n="2" xml:id="p9_l2" facs="#Farfalla_1877_4_4_45_p9_l2"/>impedire che l'arte sia la manifestazione del secolo 
+            <lb n="3" xml:id="p9_l3" facs="#Farfalla_1877_4_4_45_p9_l3"/>- d'un secolo che apparecchia grandi <term type="verbum" subtype="evoluzione_sociale">catastrofi</term> e 
+            <lb n="4" xml:id="p9_l4" facs="#Farfalla_1877_4_4_45_p9_l4"/>grandi <term type="verbum" subtype="evoluzione_sociale">innalzamenti</term>. Come pure nessuno dotato di 
+            <lb n="5" xml:id="p9_l5" facs="#Farfalla_1877_4_4_45_p9_l5"/>buon senso può ammettere che l'arte ritragga una 
+            <lb n="6" xml:id="p9_l6" facs="#Farfalla_1877_4_4_45_p9_l6"/>società che più non esiste - Ad ogni modo la <term type="forma_letteraria" subtype="genere_letterario"><w lemma="critica">cri
+            <lb n="7" xml:id="p9_l7" facs="#Farfalla_1877_4_4_45_p9_l7" break="no"/>tica</w> storica</term> si ride di tutte le piccinerie di certi 
+            <lb n="8" xml:id="p9_l8" facs="#Farfalla_1877_4_4_45_p9_l8"/>schiamazzatori artisti che sanno essere i fedeli <term type="verbum" subtype="oggettivita_impersonalita"><w lemma="termometri">ter
+            <lb n="9" xml:id="p9_l9" facs="#Farfalla_1877_4_4_45_p9_l9" break="no"/>mometri</w></term> della <term type="verbum" subtype="evoluzione_sociale">vita sociale</term>.
+            </p>
+            <p xml:id="p_10" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p10">
+            <lb n="1" xml:id="p10_l1" facs="#Farfalla_1877_4_4_45_p10_l1"/>A tutti coloro che abbracciano le idee della scuola 
+            <lb n="2" xml:id="p10_l2" facs="#Farfalla_1877_4_4_45_p10_l2"/>moderna, e vogliono farsene interpreti in degni <w lemma="lavori">la
+            <lb n="3" xml:id="p10_l3" facs="#Farfalla_1877_4_4_45_p10_l3" break="no"/>vori</w>, <rs type="person" subtype="real" ref="coverlessListPerson.xml#enricoOnufrio">io</rs> non raccomando che una cosa sola: non <distinct><w lemma="cascate">ca
+            <lb n="4" xml:id="p10_l4" facs="#Farfalla_1877_4_4_45_p10_l4" break="no"/>scate</w></distinct> nell'esagerato. Nei vostri <term type="forma_letteraria" subtype="genere_letterario">romanzi</term> non create 
+            <lb n="5" xml:id="p10_l5" facs="#Farfalla_1877_4_4_45_p10_l5"/>dei <term type="forma_letteraria" subtype="narrazione">tipi</term>, ma create degli uomini.
+            </p>
+            <p xml:id="p_11" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p11">
+            <lb n="1" xml:id="p11_l1" facs="#Farfalla_1877_4_4_45_p11_l1"/>Infatti se voi, volendo ritrarre una <ref target="#conflittoSociale">classe speciale</ref> 
+            <lb n="2" xml:id="p11_l2" facs="#Farfalla_1877_4_4_45_p11_l2"/>di persone, accumulate in un solo <term type="forma_letteraria" subtype="narrazione">personaggio</term> tutti 
+            <lb n="3" xml:id="p11_l3" facs="#Farfalla_1877_4_4_45_p11_l3"/>i vizi o tutte le virtù della classe medesima, voi non 
+            <lb n="4" xml:id="p11_l4" facs="#Farfalla_1877_4_4_45_p11_l4"/>create un uomo ma presentate un <term type="forma_letteraria" subtype="narrazione">tipo</term> - Ciò <w lemma="signica">signi
+            <lb n="5" xml:id="p11_l5" facs="#Farfalla_1877_4_4_45_p11_l5" break="no"/>fica</w> cadere nell'<term type="forma_letteraria" subtype="autorialita_narrativita">esagerazione</term> e nel <term type="forma_letteraria" subtype="autorialita_narrativita">paradosso</term> - dove 
+            <lb n="6" xml:id="p11_l6" facs="#Farfalla_1877_4_4_45_p11_l6"/>tanti uomini grandi - fra cui <persName type="real" ref="coverlessListPerson.xml#victorMarieHugo">Victor Hugo</persName> - sono 
+            <lb n="7" xml:id="p11_l7" facs="#Farfalla_1877_4_4_45_p11_l7"/>incappati.
+            </p>
+            <p xml:id="p_12" rend="first-line-indented" facs="#Farfalla_1877_4_4_45_p12">
+            <lb n="1" xml:id="p12_l1" facs="#Farfalla_1877_4_4_45_p12_l1"/>Questo per insegnare a certi critici e a certi <w lemma="artisti">ar
+            <lb n="2" xml:id="p12_l2" facs="#Farfalla_1877_4_4_45_p12_l2" break="no"/>tisti</w> che il <term type="forma_letteraria" subtype="ismi">realismo</term> non è nè una <term type="forma_letteraria" subtype="autorialita_narrativita">contraffazione</term> nè 
+            <lb n="3" xml:id="p12_l3" facs="#Farfalla_1877_4_4_45_p12_l3"/>un'<term type="forma_letteraria" subtype="autorialita_narrativita">esagerazione</term> dell'arte.
+            </p>
+         </div>
+         <div type="closer">
+         <signed rend="right" facs="#Farfalla_1877_4_4_45_sig">
+            <persName type="real" ref="coverlessListPerson.xml#enricoOnufrio">
+                  <forename>
+                     <choice>
+                        <abbr>Enr<am>.</am>&#160;</abbr>
+                        <expan resp="#MR">Enr<ex>ico</ex></expan>
+                     </choice>
+                  </forename>
+                  <surname>Onufrio</surname>
+            </persName>
+         </signed>
+      </div>
+      </body>
+  </text>
+</TEI>
