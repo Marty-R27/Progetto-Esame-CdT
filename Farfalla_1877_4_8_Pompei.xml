@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="pompei.xsl"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="it">
+      <fileDesc>
+         <titleStmt>
+            <title>Pompei</title>
+            <respStmt>
+               <resp>Conversione TEI P5 a cura di</resp>
+               <name xml:id="MR">Martina Ricci</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition n="1">Digital edition - <date when="2026-07">Luglio 2026</date>
+            </edition>
+            <respStmt>
+               <resp>Digital edition project coordinated by</resp>
+               <name xml:id="DS">Daria Spampinato</name>
+               <name xml:id="ADS">Antonio Di Silvestro</name>
+            </respStmt>
+            <respStmt>
+               <resp>Encoding model by</resp>
+               <name ref="#LM">Laura Mazzagufo</name>
+               <name xml:id="AMDG">Angelo Mario Del Grosso</name>
+               <name xml:id="DB">Denise Bruno</name>
+            </respStmt>
+            <funder>NextGenerationEU</funder>
+            <funder>Ministero dell'Università e della Ricerca</funder>
+            <funder>Italia Domani - Piano Nazionale di Ripresa e Resilienza</funder>
+            <funder ref="coverlessListOrganization.xml#CNR">CNR - Consiglio Nazionale delle
+               Ricerche</funder>
+            <funder ref="coverlessListOrganization.xml#UniCT">Università di Catania</funder>
+         </editionStmt>
+         <publicationStmt>
+            <authority ref="coverlessListOrganization.xml#ISTC">CNR ISTC - Istituto di Scienze e
+               Tecnologie della Cognizione del Consiglio Nazionale delle Ricerche</authority>
+            <authority ref="coverlessListOrganization.xml#UniCT">Università di Catania</authority>
+            <date when="2026">2026</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC
+                  4.0</licence>
+            </availability>
+            <idno type="filename">Farfalla_1877_4_8_Pompei.xml</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <listBibl>
+               <biblStruct>
+                  <analytic>
+                     <title level="a">Pompei</title>
+                     <author ref="coverlessListPerson.xml#ignoto">Autore ignoto</author>
+                  </analytic>
+                  <monogr>
+                     <title level="j" xml:id="farfalla">La Farfalla</title>
+                     <imprint>
+                        <pubPlace ref="coverlessListPlace.xml#CA">Cagliari</pubPlace>
+                        <date when="1877-09-09">9 settembre 1877</date>
+                     </imprint>
+                     <biblScope unit="volume">4</biblScope>
+                     <biblScope unit="issue">8</biblScope>
+                     <biblScope unit="page">90</biblScope>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Codifica realizzata per il progetto PRIN PNRR COVerLeSS (<ref target="http://chroma.cnr.it/progetti/">descrizione online</ref>).</p>
+         </projectDesc>
+         <editorialDecl>
+            <hyphenation>
+               <p>Si è scelto di rimuovere i trattini di marcatura degli "a capo" in fine riga.</p>
+            </hyphenation>
+            <normalization>
+               <p>Si è scelto di normalizzare gli spazi tra parola e punteggiatura.</p>
+               <p>Si è scelto di mantenere la resa grafica del maiuscolo anche nel testo e di
+                  esplicitarne la semantica con l'uso del tag corrispondente.</p>
+            </normalization>
+            <punctuation>
+               <p>Tutta la punteggiatura nella fonte originale è stata mantenuta e rappresentata
+                  usando il carattere corrispondente.</p>
+            </punctuation>
+            <quotation>
+               <p>Tutti i marcatori delle citazioni sono stati mantenuti e inglobati nel contenuto
+                  dell'elemento stesso.</p>
+               <p>Si è scelto di usare sempre <tag>quote</tag> per marcare citazioni che l'autore
+                  del testo attriuisce a fonti esterne allo stesso; è stato usato <tag>q</tag> per
+                  le citazioni implicite.</p>
+            </quotation>
+            <p>Si è scelto di usare lo standard anno-mese-giorno per le date.</p>
+            <interpretation>
+               <p>Si è scelto di creare una tassonomia in <tag>textClass</tag> con i principali temi
+                  del Verismo riconosciuti nei testi codificati. All'interno del testo, sono state
+                  marcate parole e frasi esemplificative di questi temi, ricondotte alle categorie
+                  corrispondenti attraverso l'uso del tag <tag>ref</tag>.</p>
+               <p>Le abbreviazioni sono state sciolte e marcate con il tag <tag>choice</tag> e le
+                  due alternative, <tag>abbr</tag> ed <tag>expan</tag>.</p>
+            </interpretation>
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <keywords>
+               <term type="text" subtype="testo_in_versi">Articolo in rivista</term>
+            </keywords>
+            <keywords scheme="#themesTaxonomy">
+               <term type="themes" ref="coverlessTassonomia.xml#anticonformismo">Anticonformismo</term>
+            </keywords>
+         </textClass>
+         <creation>
+            <placeName ref="coverlessListPlace.xml#CA">Cagliari</placeName>
+            <date when="1877-09-09">9 settembre 1877</date>
+         </creation>
+         <abstract>
+           <p>La poesia è una riflessione lirica sulle rovine di Pompei. Il poeta non prova soggezione di fronte alla pace eterna del sito archeologico. Al contrario, rifiutando la noia e la stasi della storia, invoca la forza vitale e lo strepito della natura selvaggia per sfuggire allo scetticismo del mondo contemporaneo.</p>
+         </abstract>
+         <langUsage>
+            <language ident="it">Italiano</language>
+            <language ident="it-x-800">Italiano di fine Ottocento</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change status="draft" when="2026-07-15" resp="#MR">First draft 15 luglio 2026</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+         <surface xml:id="Farfalla_1877_4_8_Pompei" ulx="0" uly="0" lrx="3293" lry="4974">
+            <graphic url="Farfalla_1877_4_8_90.jpeg" width="3402px" height="4975px"/> <!--Farfalla_1877_4_4_45.tif per Safari-->
+            
+            <zone xml:id="Farfalla_1877_4_8_90_numpag" ulx="1513" uly="337" lrx="1877" lry="430"/> <!-- numero pagina -->
+            
+            <zone xml:id="Farfalla_1877_4_8_90_titolo" ulx="2138" uly="1720" lrx="2655" lry="1859"/> <!-- titolo -->
+            
+            <zone xml:id="Farfalla_1877_4_8_90_metamark1" ulx="2300" uly="1887" lrx="2472" lry="1942"/> <!-- metamark -->
+            
+            <zone xml:id="Farfalla_1877_4_8_90_dedica" ulx="2079" uly="1996" lrx="2713" lry="2082"/> <!-- dedica -->
+            
+            <zone xml:id="Farfalla_1877_4_8_90_metamark2" ulx="2301" uly="2092" lrx="2472" lry="2152"/> <!-- metamark -->
+            
+            <zone xml:id="Farfalla_1877_4_8_90_intestazione_e_testo" ulx="1807" uly="1699" lrx="2959" lry="4549"/> <!-- titolo + dedica + poesia -->
+            
+            <zone xml:id="Farfalla_1877_4_8_90_testo" ulx="1856" uly="2236" lrx="2728" lry="4541"/> <!-- solo testo della poesia -->
+            <zone rend="paragraph" ulx="1865" uly="2239" lrx="2691" lry="2720" xml:id="Farfalla_1877_4_8_90_lg1"/>
+            <zone rend="line" ulx="1856" uly="2235" lrx="2479" lry="2289" xml:id="Farfalla_1877_4_8_90_lg1_l1"/>
+            <zone rend="line" ulx="2001" uly="2301" lrx="2564" lry="2353" xml:id="Farfalla_1877_4_8_90_lg1_l2"/>
+            <zone rend="line" ulx="1999" uly="2362" lrx="2604" lry="2410" xml:id="Farfalla_1877_4_8_90_lg1_l3"/>
+            <zone rend="line" ulx="1996" uly="2422" lrx="2660" lry="2465" xml:id="Farfalla_1877_4_8_90_lg1_l4"/>
+            <zone rend="line" ulx="1998" uly="2484" lrx="2657" lry="2535" xml:id="Farfalla_1877_4_8_90_lg1_l5"/>
+            <zone rend="line" ulx="2002" uly="2544" lrx="2514" lry="2594" xml:id="Farfalla_1877_4_8_90_lg1_l6"/>
+            <zone rend="line" ulx="2003" uly="2606" lrx="2690" lry="2658" xml:id="Farfalla_1877_4_8_90_lg1_l7"/>
+            <zone rend="line" ulx="2005" uly="2668" lrx="2525" lry="2711" xml:id="Farfalla_1877_4_8_90_lg1_l8"/>
+            
+            <zone rend="paragraph" ulx="1864" uly="2830" lrx="2629" lry="3326" xml:id="Farfalla_1877_4_8_90_lg2"/>
+            <zone rend="line" ulx="1866" uly="2840" lrx="2493" lry="2886" xml:id="Farfalla_1877_4_8_90_lg2_l1"/>
+            <zone rend="line" ulx="2015" uly="2894" lrx="2585" lry="2948" xml:id="Farfalla_1877_4_8_90_lg2_l2"/>
+            <zone rend="line" ulx="2013" uly="2960" lrx="2555" lry="3003" xml:id="Farfalla_1877_4_8_90_lg2_l3"/>
+            <zone rend="line" ulx="2012" uly="3018" lrx="2571" lry="3069" xml:id="Farfalla_1877_4_8_90_lg2_l4"/>
+            <zone rend="line" ulx="2015" uly="3080" lrx="2606" lry="3137" xml:id="Farfalla_1877_4_8_90_lg2_l5"/>
+            <zone rend="line" ulx="2016" uly="3148" lrx="2580" lry="3193" xml:id="Farfalla_1877_4_8_90_lg2_l6"/>
+            <zone rend="line" ulx="2018" uly="3202" lrx="2630" lry="3257" xml:id="Farfalla_1877_4_8_90_lg2_l7"/>
+            <zone rend="line" ulx="2023" uly="3266" lrx="2551" lry="3313" xml:id="Farfalla_1877_4_8_90_lg2_l8"/>
+            
+            <zone rend="paragraph" ulx="1863" uly="3429" lrx="2708" lry="3929" xml:id="Farfalla_1877_4_8_90_lg3"/>
+            <zone rend="line" ulx="1871" uly="3444" lrx="2505" lry="3485" xml:id="Farfalla_1877_4_8_90_lg3_l1"/>
+            <zone rend="line" ulx="2009" uly="3501" lrx="2567" lry="3550" xml:id="Farfalla_1877_4_8_90_lg3_l2"/>
+            <zone rend="line" ulx="2008" uly="3565" lrx="2657" lry="3616" xml:id="Farfalla_1877_4_8_90_lg3_l3"/>
+            <zone rend="line" ulx="2002" uly="3623" lrx="2562" lry="3674" xml:id="Farfalla_1877_4_8_90_lg3_l4"/>
+            <zone rend="line" ulx="2011" uly="3686" lrx="2625" lry="3732" xml:id="Farfalla_1877_4_8_90_lg3_l5"/>
+            <zone rend="line" ulx="2009" uly="3744" lrx="2649" lry="3802" xml:id="Farfalla_1877_4_8_90_lg3_l6"/>
+            <zone rend="line" ulx="2008" uly="3812" lrx="2697" lry="3861" xml:id="Farfalla_1877_4_8_90_lg3_l7"/>
+            <zone rend="line" ulx="2008" uly="3870" lrx="2682" lry="3917" xml:id="Farfalla_1877_4_8_90_lg3_l8"/>
+            
+            <zone rend="paragraph" ulx="1866" uly="4027" lrx="2606" lry="4517" xml:id="Farfalla_1877_4_8_90_lg4"/>
+            <zone rend="line" ulx="1873" uly="4030" lrx="2352" lry="4085" xml:id="Farfalla_1877_4_8_90_lg4_l1"/>
+            <zone rend="line" ulx="2015" uly="4096" lrx="2526" lry="4148" xml:id="Farfalla_1877_4_8_90_lg4_l2"/>
+            <zone rend="line" ulx="2018" uly="4157" lrx="2614" lry="4209" xml:id="Farfalla_1877_4_8_90_lg4_l3"/>
+            <zone rend="line" ulx="2019" uly="4220" lrx="2427" lry="4269" xml:id="Farfalla_1877_4_8_90_lg4_l4"/>
+            <zone rend="line" ulx="2020" uly="4281" lrx="2565" lry="4323" xml:id="Farfalla_1877_4_8_90_lg4_l5"/>
+            <zone rend="line" ulx="2020" uly="4334" lrx="2586" lry="4390" xml:id="Farfalla_1877_4_8_90_lg4_l6"/>
+            <zone rend="line" ulx="2023" uly="4401" lrx="2585" lry="4450" xml:id="Farfalla_1877_4_8_90_lg4_l7"/>
+            <zone rend="line" ulx="2026" uly="4462" lrx="2579" lry="4511" xml:id="Farfalla_1877_4_8_90_lg4_l8"/>
+         </surface>
+   </facsimile>
+   <text>
+      <body>
+         <pb n="1" xml:id="Farfalla_1877_4_8_90" facs="#Farfalla_1877_4_8_Pompei"/>
+         <cb n="2" xml:id="col_2-p.90"/>
+         <div type="intestazione">
+            <head type="main" facs="#Farfalla_1877_4_8_90_titolo">Pompei</head>
+            <metamark function="sectionDivider" facs="#Farfalla_1877_4_8_90_metamark1">~</metamark> 
+            <head type="dedica" rend="uppercase" facs="#Farfalla_1877_4_8_90_dedica">(A <persName type="real" ref="coverlessListPerson.xml#ferdinandoFontana">FERDINANDO FONTANA</persName>)</head>
+            <metamark function="sectionDivider" facs="#Farfalla_1877_4_8_90_metamark2">~</metamark>
+         </div>
+         <div type="text" facs="#Farfalla_1877_4_8_90_testo">
+            <lg n="1" xml:id="lg_1" facs="#Farfalla_1877_4_8_90_lg1">
+               <l n="1" xml:id="lg1_l1" facs="#Farfalla_1877_4_8_90_lg1_l1"><placeName type="real" ref="coverlessListPlace.xml#pompei">Pompei</placeName>, le <rs type="place" subtype="real" ref="coverlessListPlace.xml#pompei">tue</rs> macerie</l>
+               <l n="2" xml:id="lg1_l2" facs="#Farfalla_1877_4_8_90_lg1_l2" rend="indent">Non <rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">mi</rs>&#160;<ref target="coverlessTassonomia.xml#anticonformismo">fanno paüra</ref>;</l>
+               <l n="3" xml:id="lg1_l3" facs="#Farfalla_1877_4_8_90_lg1_l3" rend="indent"><ref target="coverlessTassonomia.xml#anticonformismo"><rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">Mi</rs> vien quasi da ridere</ref></l>
+               <l n="4" xml:id="lg1_l4" facs="#Farfalla_1877_4_8_90_lg1_l4" rend="indent">Fra le <rs type="place" subtype="real" ref="coverlessListPlace.xml#pompei">tue</rs> vecchie mura...</l>
+               <l n="5" xml:id="lg1_l5" facs="#Farfalla_1877_4_8_90_lg1_l5" rend="indent"><rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">Io</rs>&#160;<term type="verbum" subtype="studio_osservazione">guardo agli spettacoli</term></l>
+               <l n="6" xml:id="lg1_l6" facs="#Farfalla_1877_4_8_90_lg1_l6" rend="indent">Della terra infinita,</l>
+               <l n="7" xml:id="lg1_l7" facs="#Farfalla_1877_4_8_90_lg1_l7" rend="indent">Che un grido <rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">mi</rs> ripetono:</l>
+               <l n="8" xml:id="lg1_l8" facs="#Farfalla_1877_4_8_90_lg1_l8" rend="indent"><q>Com'è bella la vita!</q></l>
+            </lg>
+            <lg n="2" xml:id="lg_2" facs="#Farfalla_1877_4_8_90_lg2">
+               <l n="1" xml:id="lg2_l1" facs="#Farfalla_1877_4_8_90_lg2_l1"><ref target="coverlessTassonomia.xml#anticonformismo">Che <rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">m'</rs>importa</ref> se il sole</l>
+               <l n="2" xml:id="lg2_l2" facs="#Farfalla_1877_4_8_90_lg2_l2" rend="indent"><term type="verbum" subtype="studio_osservazione">Risorga</term> e poi <term type="verbum" subtype="studio_osservazione">tramonti</term></l>
+               <l n="3" xml:id="lg2_l3" facs="#Farfalla_1877_4_8_90_lg2_l3" rend="indent">Dalla <rs type="place" subtype="real" ref="coverlessListPlace.xml#pompei">tua</rs>&#160;<term type="verbum" subtype="arti_visive">gialla</term> mole</l>
+               <l n="4" xml:id="lg2_l4" facs="#Farfalla_1877_4_8_90_lg2_l4" rend="indent">Dietro <term type="stile" subtype="lessico">grulli</term> orizzonti,</l>
+               <l n="5" xml:id="lg2_l5" facs="#Farfalla_1877_4_8_90_lg2_l5" rend="indent">Mentre il serpe s'aggira</l>
+               <l n="6" xml:id="lg2_l6" facs="#Farfalla_1877_4_8_90_lg2_l6" rend="indent">Fra le <rs type="place" subtype="real" ref="coverlessListPlace.xml#pompei">tue</rs> paci eterne</l>
+               <l n="7" xml:id="lg2_l7" facs="#Farfalla_1877_4_8_90_lg2_l7" rend="indent">E ovunque l'<term type="verbum" subtype="studio_osservazione">occhio mira</term></l>
+               <l n="8" xml:id="lg2_l8" facs="#Farfalla_1877_4_8_90_lg2_l8" rend="indent">Solo la pace <term type="verbum" subtype="studio_osservazione">scerne</term>?</l>
+            </lg>
+            <lg n="3" xml:id="lg_3" facs="#Farfalla_1877_4_8_90_lg3">
+               <l n="1" xml:id="lg3_l1" facs="#Farfalla_1877_4_8_90_lg3_l1">In questo mondo <term type="verbum" subtype="vero_verita">scettico</term></l>
+               <l n="2" xml:id="lg3_l2" facs="#Farfalla_1877_4_8_90_lg3_l2" rend="indent">Dove abbonda la noia</l>
+               <l n="3" xml:id="lg3_l3" facs="#Farfalla_1877_4_8_90_lg3_l3" rend="indent">Dove il <ref target="coverlessTassonomia.xml#criticaLetteraria">pianto è rettorica</ref></l>
+               <l n="4" xml:id="lg3_l4" facs="#Farfalla_1877_4_8_90_lg3_l4" rend="indent">Dove langue la gioia,</l>
+               <l n="5" xml:id="lg3_l5" facs="#Farfalla_1877_4_8_90_lg3_l5" rend="indent">Vo' in cerca di qualcosa</l>
+               <l n="6" xml:id="lg3_l6" facs="#Farfalla_1877_4_8_90_lg3_l6" rend="indent">Che somigli allo <ref target="coverlessTassonomia.xml#anticonformismo">strepito</ref>,</l>
+               <l n="7" xml:id="lg3_l7" facs="#Farfalla_1877_4_8_90_lg3_l7" rend="indent">Che in mezzo a <ref target="coverlessTassonomia.xml#criticaLetteraria">tanta prosa</ref></l>
+               <l n="8" xml:id="lg3_l8" facs="#Farfalla_1877_4_8_90_lg3_l8" rend="indent"><rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">Mi</rs> doni un pò di fremito!</l>
+            </lg>
+            <lg n="4" xml:id="lg_4" facs="#Farfalla_1877_4_8_90_lg4">
+               <l n="1" xml:id="lg4_l1" facs="#Farfalla_1877_4_8_90_lg4_l1">E tutte <ref target="coverlessTassonomia.xml#anticonformismo">scatenatevi</ref></l>
+               <l n="2" xml:id="lg4_l2" facs="#Farfalla_1877_4_8_90_lg4_l2" rend="indent"><ref target="coverlessTassonomia.xml#anticonformismo">Ire</ref> dei flutti <term type="verbum" subtype="arti_visive">azzurri</term></l>
+               <l n="3" xml:id="lg4_l3" facs="#Farfalla_1877_4_8_90_lg4_l3" rend="indent">E intorno mormorate<rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">mi</rs></l>
+               <l n="4" xml:id="lg4_l4" facs="#Farfalla_1877_4_8_90_lg4_l4" rend="indent">I feroci sussurri</l>
+               <l n="5" xml:id="lg4_l5" facs="#Farfalla_1877_4_8_90_lg4_l5" rend="indent">Della tempesta, e fate</l>
+               <l n="6" xml:id="lg4_l6" facs="#Farfalla_1877_4_8_90_lg4_l6" rend="indent">Che pari ad una <term type="stile" subtype="lessico">frasca</term></l>
+               <l n="7" xml:id="lg4_l7" facs="#Farfalla_1877_4_8_90_lg4_l7" rend="indent"><rs type="person" subtype="real" ref="coverlessListPerson.xml#ignoto">Io</rs>&#160;<term type="verbum" subtype="evoluzione_sociale">sbatta</term> tra le ondate</l>
+               <l n="8" xml:id="lg4_l8" facs="#Farfalla_1877_4_8_90_lg4_l8" rend="indent">Della vostra burrasca!</l>
+            </lg>
+         </div>
+      </body>
+   </text>
+</TEI>
