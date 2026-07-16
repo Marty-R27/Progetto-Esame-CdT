@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+
+
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+
+
+<!--Foglio di stile-->
+<?xml-stylesheet type="text/xsl" href="FoglioStile.xsl"?> 
+
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">  <!-- elemento radice, namespace standard TEI -->
+    <teiHeader xml:lang="it">
+        <fileDesc>
+            <titleStmt>
+                <title xml:id='titolo_libro'>
+                    A Milano!
+                    
+                </title>
+                <respStmt>
+                    <resp>Conversion in TEI 5 by</resp>
+                    <name xml:id="BL">Beatrice Longhi</name>
+                </respStmt>
+            </titleStmt>
+            
+            <editionStmt>
+                <edition n="1">Digital edition - <date when="2024-10">October 2024</date></edition>
+                <respStmt>
+                    <resp>Digital edition project coordineted by</resp>
+                    <name xml:id="DS">Daria Spampinato</name>
+                    <name xml:id="ADS">Antonio Di Silvestro</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Encoding model by</resp>
+                    <name resp="#DS">Daria Spampinato</name>
+                    <name xml:id="LM">Laura Mazzagufo</name>
+                    <name xml:id="AMDG">Angelo Mario Del Grosso</name>
+                    <name xml:id="DB">Denise Bruno</name>
+                </respStmt>
+                <funder>NextGenerationEU</funder>
+                <funder>Ministero dell'Università e della Ricerca</funder>
+                <funder>Italia Domani - Piano Nazionale di Ripresa e Resilienza</funder>
+                <funder ref="coverlessListOrganization.xml#CNR">CNR - Consiglio Nazionale delle Ricerche</funder>
+                <funder ref="coverlessListOrganization.xml#UniCT">Università di Catania</funder>
+            </editionStmt>
+            <publicationStmt>
+                <!-- Dati di diffusione e distribuzione dell'edizione -->
+                <authority ref="coverlessListOrganization.xml#ISTC">CNR ISTC - Istituto di Scienze e Tecnologie della Cognizione del Consiglio Nazionale delle Ricerche</authority>
+                <authority ref="coverlessListOrganization.xml#UniCT">Università di Catania</authority>
+                <date when="2026">2026</date>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</licence>
+                </availability>
+                
+                <idno type="filename">Farfalla_1877_4_8_AMilano.xml</idno> <!--Il punto esclamativo dà problemi per il teminale, per questo non è stato riportato-->
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl xml:id="bibliografiaPrimaria"> <!--Per bibliografia primaria-->
+                    <biblStruct>
+                        
+                        <analytic>
+                            <title level="a">A Milano!</title>
+                            <author ref="coverlessListPerson.xml#psiche">Psiche</author>
+                            
+                        </analytic>
+                        
+                        <monogr>
+                            <title level="j" xml:id="farfalla">La Farfalla</title> 
+                            <imprint>
+                                <publisher ref="coverlessListOrganization.xml#farfalla">La Farfalla</publisher> 
+                                <pubPlace ref="coverlessListPlace.xml#CA">Cagliari</pubPlace>
+                                <date when="1877-09-09">9 settembre 1877</date>
+                            </imprint>
+                            <biblScope unit="volume">4</biblScope>
+                            <biblScope unit="issue">8</biblScope>
+                            <biblScope unit="page">90</biblScope>
+                        </monogr>
+                        
+                        
+                    </biblStruct>      
+                    
+                </listBibl> 
+            </sourceDesc>
+        </fileDesc>
+        
+        <encodingDesc>
+            <projectDesc>
+                <p>Codifica realizzata per il progetto PRIN PNRR COVerLeSS (<ref target="http://chroma.cnr.it/progetti/">descrizione onzone</ref>).</p>
+            </projectDesc>
+            <editorialDecl>
+                <hyphenation>
+                    <p>Si è scelto di rimuovere i trattini di marcatura degli "a capo" in fine riga.</p>
+                </hyphenation>
+                <normalization>
+                    <p>Si è scelto di normalizzare gli spazi tra parola e punteggiatura.</p>
+                    <p>Si è scelto di mantenere la resa grafica del maiuscolo anche nel testo e di esplicitarne la semantica con l'uso del tag corrispondente.</p>
+                </normalization>
+                <punctuation>
+                    <p>Tutta la punteggiatura nella fonte originale è stata mantenuta e rappresentata usando il carattere corrispondente.</p>
+                </punctuation>
+                <quotation>
+                    <p>Tutti i marcatori delle citazioni sono stati mantenuti e inglobati nel contenuto dell'elemento stesso.</p>
+                    <p>Si è scelto di usare sempre <tag>quote</tag> per marcare citazioni che l'autore del testo attribuisce a fonti esterne allo stesso; è stato usato <tag>q</tag> per le citazioni implicite.</p>
+                </quotation>
+                <p>Si è scelto di usare lo standard anno-mese-giorno per le date.</p>
+                <interpretation>
+                    <p>Si è scelto di creare una tassonomia in <tag>textClass</tag> con i principali temi del Verismo riconosciuti nei testi codificati. All'interno del testo, sono state marcate parole e frasi esemplificative di questi temi, ricondotte alle categorie corrispondenti attraverso l'uso del tag <tag>ref</tag>.</p>
+                    <p>Le abbreviazioni sono state sciolte e marcate con il tag <tag>choice</tag> e le due alternative, <tag>abbr</tag> ed <tag>expan</tag>.</p>
+                </interpretation>
+            </editorialDecl>
+        </encodingDesc>
+        
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term type="text" subtype="testo_in_prosa">Articolo in rivista</term>
+                </keywords>
+                <keywords scheme="#themesTaxonomy">
+                    <term type="themes" ref="coverlessTassonomia.xml#giornalismoMilano">Giornalismo Milano</term>
+                </keywords>
+            </textClass>
+            
+            
+            
+            <creation>
+                <date when="1877-09-09">9 settembre 1877</date>
+                <placeName ref="coverlessListPlace.xml#CA">Cagliari</placeName>
+            </creation> 
+            
+            <abstract>
+                <p>Questo testo firmato "Psiche" e intitolato "A Milano !" contiene l'addio della Farfalla alla sua prima sede (Cagliari) e l'entusiastica giustificazione del suo trasferimento a Milano.</p>
+            </abstract>
+            
+            <langUsage>
+                <language ident="it">Italiano</language>
+                <language ident="fr">Francese</language>
+            </langUsage>
+        </profileDesc>
+        
+        <revisionDesc>
+            <change resp="#BL" status="draft" when="2026-06">First draft available in June 2026</change> 
+            <change resp="#BL" status="draft" when="2026-07">Final draft available in July 2026</change> 
+        </revisionDesc>
+    </teiHeader>
+    
+    <!--Per embedded transcription-->   
+    <facsimile>
+        <surfaceGrp n="1">
+            <surface xml:id="s" ulx="3" uly="3" lrx="3351" lry="4926">
+                <graphic url="Farfalla_1877_4_8_90.jpeg" width='3402px' height='4975px'/> <!--url="Farfalla_1877_4_8_90.tif" per Safari-->
+                <zone xml:id="z0" ulx="1503" uly="337" lrx="1897" lry="419"/> <!--numero pagina-->
+                <zone xml:id="z1" ulx="329" uly="513" lrx="1629" lry="2540"> 
+
+                    <zone  xml:id="z1-l1" ulx="336" uly="543" lrx="1629" lry="588"/>        <!--inserisci <lb> per zonee in text e aggiungi @facs="id coor di qui"-->
+                    <zone  xml:id="z1-l2" ulx="334" uly="597" lrx="1627" lry="643"/>
+                    <zone  xml:id="z1-l3" ulx="336" uly="658" lrx="1627" lry="699"/>
+                    <zone  xml:id="z1-l4" ulx="338" uly="719" lrx="1629" lry="765"/>
+                    <zone  xml:id="z1-l5" ulx="339" uly="782" lrx="1631" lry="829"/>
+                    <zone  xml:id="z1-l6" ulx="342" uly="840" lrx="1630" lry="893"/>
+                    <zone  xml:id="z1-l7" ulx="347" uly="902" lrx="969" lry="959"/>
+                    <zone  xml:id="z1-l8" ulx="410" uly="961" lrx="1631" lry="1008"/>
+                    <zone  xml:id="z1-l9" ulx="342" uly="1014" lrx="1630" lry="1078"/>
+                    <zone  xml:id="z1-l10" ulx="339" uly="1077" lrx="1442" lry="1133"/>
+                    <zone  xml:id="z1-l11" ulx="404" uly="1148" lrx="1617" lry="1198"/>
+                    <zone  xml:id="z1-l12" ulx="338" uly="1202" lrx="1625" lry="1258"/>
+                    <zone  xml:id="z1-l13" ulx="340" uly="1269" lrx="1623" lry="1313"/>
+                    <zone  xml:id="z1-l14" ulx="340" uly="1325" lrx="1293" lry="1381"/>
+                    <zone  xml:id="z1-l15" ulx="395" uly="1391" lrx="1632" lry="1438"/>
+                    <zone  xml:id="z1-l16" ulx="342" uly="1444" lrx="1633" lry="1499"/>
+                    <zone  xml:id="z1-l17" ulx="343" uly="1506" lrx="1633" lry="1560"/> 
+                    <zone xml:id="z1-l18" ulx="343" uly="1565" lrx="1630" lry="1615"/>
+                    <zone xml:id="z1-l19" ulx="344" uly="1625" lrx="1627" lry="1678"/>
+                    <zone xml:id="z1-l20" ulx="344" uly="1681" lrx="1560" lry="1741"/>
+                    <zone xml:id="z1-l21" ulx="392" uly="1747" lrx="1627" lry="1803"/>
+                    <zone xml:id="z1-l22" ulx="342" uly="1811" lrx="1631" lry="1866"/>
+                    <zone xml:id="z1-l23" ulx="346" uly="1876" lrx="1624" lry="1916"/>
+                    <zone xml:id="z1-l24" ulx="350" uly="1932" lrx="1629" lry="1986"/>
+                    <zone xml:id="z1-l25" ulx="342" uly="1995" lrx="1628" lry="2040"/>
+                    <zone xml:id="z1-l26" ulx="345" uly="2054" lrx="1632" lry="2096"/>
+                    <zone xml:id="z1-l27" ulx="345" uly="2105" lrx="1411" lry="2163"/>
+                    <zone xml:id="z1-l28" ulx="405" uly="2172" lrx="1637" lry="2212"/>
+                    <zone xml:id="z1-l29" ulx="341" uly="2218" lrx="1634" lry="2281"/>
+                    <zone xml:id="z1-l30" ulx="341" uly="2290" lrx="1630" lry="2338"/>
+                    <zone xml:id="z1-l31" ulx="339" uly="2349" lrx="758" lry="2403"/>
+                    <zone xml:id="z1-l32" ulx="409" uly="2411" lrx="1630" lry="2469"/>
+                    <zone xml:id="z1-l33" ulx="330" uly="2474" lrx="1634" lry="2519"/>
+                    
+    
+                    
+                    
+                </zone>
+                
+                <zone xml:id="far1f" ulx="915" uly="2558" lrx="1020" lry="2647"/> <!--farfallina1-->
+
+                <zone xml:id="z2" ulx="333" uly="2658" lrx="1633" lry="4299" >  <!--Paragrafo2-->
+                    
+                    
+                    <zone xml:id="z2-l1" ulx="394" uly="2682" lrx="1620" lry="2742"/>
+                    <zone xml:id="z2-l2" ulx="340" uly="2751" lrx="1525" lry="2799"/>
+                    <zone xml:id="z2-l3" ulx="402" uly="2809" lrx="1619" lry="2857" />
+                    <zone xml:id="z2-l4" ulx="337" uly="2866" lrx="1616" lry="2913"/>
+                    
+                    <zone xml:id="z2-l5" ulx="339" uly="2926" lrx="1616" lry="2974"/>
+                    <zone xml:id="z2-l6" ulx="341" uly="2983" lrx="1624" lry="3032"/>
+                    <zone xml:id="z2-l7" ulx="338" uly="3040" lrx="1625" lry="3101"/>
+                    <zone xml:id="z2-l8" ulx="339" uly="3109" lrx="1628" lry="3162"/>
+                    <zone xml:id="z2-l9" ulx="340" uly="3166" lrx="1626" lry="3216"/>
+                    <zone xml:id="z2-l10" ulx="339" uly="3228" lrx="1628" lry="3274"/>
+                    
+                    <zone xml:id="z2-l11" ulx="339" uly="3286" lrx="891" lry="3341"/>
+                    <zone xml:id="z2-l12" ulx="400" uly="3350" lrx="1629" lry="3400"/>
+                    <zone xml:id="z2-l13" ulx="334" uly="3409" lrx="1629" lry="3460"/>
+                    <zone xml:id="z2-l14" ulx="335" uly="3470" lrx="1625" lry="3521"/>
+                    <zone xml:id="z2-l15" ulx="337" uly="3530" lrx="1626" lry="3582"/>
+                    
+                    <zone xml:id="z2-l16" ulx="335" uly="3590" lrx="1623" lry="3643"/>
+                    <zone xml:id="z2-l17" ulx="338" uly="3652" lrx="1624" lry="3698"/>
+                    <zone xml:id="z2-l18" ulx="343" uly="3710" lrx="1623" lry="3762"/>
+                    <zone xml:id="z2-l19" ulx="343" uly="3772" lrx="962" lry="3829"/>
+                    
+                    
+                    <zone xml:id="z2-l20" ulx="399" uly="3838" lrx="1623" lry="3881"/>
+                    <zone xml:id="z2-l21" ulx="336" uly="3886" lrx="1629" lry="3942"/>
+                    <zone xml:id="z2-l22" ulx="339" uly="3951" lrx="1636" lry="4008"/>
+                    <zone xml:id="z2-l23" ulx="340" uly="4017" lrx="1076" lry="4077"/>
+                    <zone xml:id="z2-l24" ulx="399" uly="4084" lrx="1632" lry="4140"/>
+                    <zone xml:id="z2-l25" ulx="338" uly="4141" lrx="1630" lry="4195"/>
+                    <zone xml:id="z2-l26" ulx="339" uly="4206" lrx="1630" lry="4257"/>
+                    
+                </zone>
+                
+                <zone xml:id="far2f" ulx="899" uly="4289" lrx="1026" lry="4378"/> <!--Farfalla2-->
+
+                <!--Le zone 3 e 4 sono dello stesso paragrafo-->
+                <zone xml:id="z3" ulx="331" uly="4392" lrx="1645" lry="4515"> <!--Paragrafo 3 (inizio 4)-->
+                    
+                    
+                    <zone xml:id="z3-l1" ulx="394" uly="4397" lrx="1619" lry="4453"/>
+                    <zone xml:id="z3-l2" ulx="342" uly="4460" lrx="1618" lry="4516"/>
+                   
+                    
+                </zone>
+                <zone xml:id="z4" ulx="1719" uly="511" lrx="3091" lry="1450">
+                    
+                    
+                    <zone xml:id="z4-l1" ulx="1753" uly="529" lrx="3050" lry="581" />
+                    <zone xml:id="z4-l2" ulx="1751" uly="588" lrx="3065" lry="637"/>
+                    <zone xml:id="z4-l3" ulx="1754" uly="648" lrx="2000" lry="699"/>
+                    <zone xml:id="z4-l4" ulx="1830" uly="710" lrx="3068" lry="755"/>
+                    
+                    <zone xml:id="z4-l5" ulx="1754" uly="766" lrx="2667" lry="814"/>
+                    <zone xml:id="z4-l6" ulx="1807" uly="833" lrx="3073" lry="874"/>
+                    <zone xml:id="z4-l7" ulx="1757" uly="885" lrx="1956" lry="945"/>
+                    
+                    <zone xml:id="z4-l8" ulx="1815" uly="956" lrx="2143" lry="1012"/>
+                    <zone xml:id="z4-l9" ulx="1816" uly="1023" lrx="3076" lry="1058"/>
+                    <zone xml:id="z4-l10" ulx="1757" uly="1072" lrx="3075" lry="1117"/>
+                    
+                    <zone xml:id="z4-l11" ulx="1760" uly="1130" lrx="3075" lry="1178"/>
+                    <zone xml:id="z4-l12" ulx="1760" uly="1191" lrx="3069" lry="1241"/>
+                    <zone xml:id="z4-l13" ulx="1763" uly="1251" lrx="3064" lry="1292"/>
+                    <zone xml:id="z4-l14" ulx="1827" uly="1306" lrx="3068" lry="1360"/>
+                    
+                    <zone xml:id="z4-l15" ulx="1759" uly="1366" lrx="1958" lry="1426"/>
+                        
+                        
+                    
+                    
+                </zone>
+                
+                <zone xml:id="z4-l16" ulx="2717" uly="1464" lrx="2977" lry="1533" /> <!--Firma sotto par 4-->
+                
+                
+                
+                
+            </surface>
+        </surfaceGrp>
+    </facsimile>
+    <!--Fine embedded transcription-->
+    
+    
+    
+    
+    
+    <!--Body-->
+    <text type="recensione">
+        <body>
+            <pb n="1" xml:id="Farfalla_1877_0_3_5_41" facs="s"/> 
+            <div type="intestazione">
+                <head type="main" xml:id="titolo_head" rend="uppercase">A Milano!</head>
+                
+            </div>
+            <cb n="1" xml:id="col_1-p.90"/>
+            <div type="text">
+                <p xml:id="p0"><lb facs="#z0"/>90</p>
+                
+                
+                
+                <div n="1" type="section"> 
+                    <p xml:id="p1"><lb facs="#z1-l1"/>la tunica succinta ed assumeva il <term type="verbum"><distinct>balteo</distinct></term>: e cingeva
+                        <lb facs="#z1-l2"/>l'<term type="verbum"><distinct>armilla</distinct></term> al braccio manco, e incoronava la fronte
+                        <lb facs="#z1-l3"/>del diadema d'argento, e sostituiva coll' elegante
+                        <lb facs="#z1-l4"/><term type="verbum"><distinct>flammeo</distinct></term> il velo stretto e disadorno della adolescente,
+                        <lb facs="#z1-l5"/>e da capo a piedi riformava il suo abbigliamento, e
+                        <lb facs="#z1-l6"/>più fastosa e più sovente aveva l'incontrastato diritto
+                        <lb facs="#z1-l7"/>di mostrarsi al pubblico.  
+                    </p>
+                    <p xml:id="p2"  rend="first-line-indented"><lb facs="#z1-l8"/>La <name type="publisher" ref="coverlessListOrganisation.xml#farfalla">Farfalla</name> posa oggi da giovanetta romana, al
+                        <lb facs="#z1-l9"/>l'atto della sua trasformazione. <rs type="publisher" ref="coverlessListOrganisation.xml#farfalla">Essa</rs> vuol rendersi
+                        <lb facs="#z1-l10"/>più seducente, più ampia e più comprensiva.    
+                    </p>
+                    <p xml:id="p3" rend="first-line-indented"><lb facs="#z1-l11"/><placeName ref="coverlessListPlace.xml#MI" type="real">Milano</placeName> - dove l'<ref target="#giornalismoMilano">arte dei <term type="verbum" subtype="arti_visive">tipi</term></ref> ha raggiunta una
+                        <lb facs="#z1-l12"/>perfezione miracolosa - <rs type="publisher" ref="coverlessListOrganisation.xml#farfalla">le</rs> fornirà vesti più ricche,
+                        <lb facs="#z1-l13"/>ornamenti più splendidi, buongusto più raffinato di
+                        <lb facs="#z1-l14"/>forma, di giacitura, di posa, d'aspetto.
+                    </p>
+                    <p xml:id="p4" rend="first-line-indented"><lb facs="#z1-l15"/><placeName ref="coverlessListPlace.xml#MI" type="real">Milano</placeName> - sede naturale, fuoco centrico e magne-
+                        <lb facs="#z1-l16"/>tico - di tutto quanto gli ingegni sodi o bizzarri,
+                        <lb facs="#z1-l17"/>patetici o <emph rend="italic">realisti</emph> producono nel campo delle idee -
+                        <lb facs="#z1-l18"/><rs type="publisher" ref="coverlessListOrganisation.xml#farfalla">le</rs> offrirà, topograficamente ed intellettualmente par
+                        <lb facs="#z1-l19"/>lando - la sede migliore, per ivi erigere il suo la
+                        <lb facs="#z1-l20"/>baro alla vista di tutta la <term type="forma_letteraria" subtype="ismi">scapigliatura</term> italiana.
+                    </p>
+                    <p xml:id="p5" rend="first-line-indented"><lb facs="#z1-l21"/><placeName ref="coverlessListPlace.xml#MI" type="real">Milano</placeName> - dove il <ref target="#giornalismoMilano">giornalismo artistico</ref> è un bi
+                        <lb facs="#z1-l22"/>sogno, dove l'amor del leggere è una febbre, dove
+                        <lb facs="#z1-l23"/>l'alleanza del <term type="verbum" subtype="arti_visive">disegno</term> col <term type="verbum" subtype="studio_osservazione">pensiero</term> è una forza onni
+                        <lb facs="#z1-l24"/>potente - darà alla <name type="publisher" ref="coverlessListOrganisation.xml#farfalla">Farfalla</name> d'uscire al pubblico
+                        <lb facs="#z1-l25"/>settimanalmente, di fregiare le sue colonne di <term type="verbum" subtype="arti_visive">illu
+                        <lb facs="#z1-l26"/>strazioni</term> squisite, di parlare doppiamente all'intellet
+                        <lb facs="#z1-l27"/>to e agli occhi, alla fantasia ed al cuore....
+                    </p>
+                    <p xml:id="p6" rend="first-line-indented"><lb facs="#z1-l28"/><placeName ref="coverlessListPlace.xml#MI" type="real">Milano</placeName> - in una parola - è la tappa predesti
+                        <lb facs="#z1-l29"/>nata alla nostra virilità efflorescente, al nostro svi
+                        <lb facs="#z1-l30"/>luppo più assoluto, alla nostra più acremente olez
+                        <lb facs="#z1-l31"/>zante fioritura....
+                    </p>
+                    <p xml:id="p7" rend="first-line-indented"><lb facs="#z1-l32"/>Ma primo → primo fra tutti, noi educheremo, per
+                        <lb facs="#z1-l33"/>te, o madre <placeName ref="coverlessListPlace.xml#Sardegna" type="real">Sardegna</placeName>, il fiore della memoria....
+                    </p>
+            
+                </div>
+                
+                
+                
+                <metamark function="sectionDivider" xml:id="far1"><lb facs="#far1f"/>*</metamark>
+                
+                
+                <div n="2" type="section"> 
+                    <p xml:id="p8" rend="first-line-indented"><lb facs="#z2-l1"/>Sì, perchè andando a <placeName ref="coverlessListPlace.xml#MI" type="real">Milano</placeName>, la <name type="publisher" ref="coverlessListOrganisation.xml#farfalla">Farfalla</name> non
+                        <lb facs="#z2-l2"/>cesserà d'essere con voi neppure per un minuto.
+                    </p>
+                    <p xml:id="p9" rend="first-line-indented"><lb facs="#z2-l3"/><rs type="publisher" ref="coverlessListOrganisation.xml#farfalla">Essa</rs> continuerà a rovesciare sull'<rs ref="coverlessListPlace.xml#Sardegna" type="real">isola</rs> tutta la
+                        <lb facs="#z2-l4"/>tribù delle sue errabonde compagne, che seguiteranno
+                        <lb facs="#z2-l5"/>a far capolino da tutte le botteghe di librai, da tutti
+                        <lb facs="#z2-l6"/>i pubblici ritrovi, da tutti i vostri <foreign xml:lang="fr" rend="italic">boudoirs</foreign>, o let
+                        <lb facs="#z2-l7"/>trici innamorate, da tutti i luoghi infine dove ci sia
+                        <lb facs="#z2-l8"/>posto per i suoi <term type="forma_letteraria" subtype="genere_letterario">fascicoli</term>, ora mesti, ora fieri, ora
+                        <lb facs="#z2-l9"/>soavi, ora amari - ma sempre di voi memori: di
+                        <lb facs="#z2-l10"/>voi che avete propiziato al suo nascere, come ad una
+                        <lb facs="#z2-l11"/>cara festa di famiglia.
+
+                    </p>
+                    <p xml:id="p10" rend="first-line-indented"><lb facs="#z2-l12"/><rs type="publisher" ref="coverlessListOrganisation.xml#farfalla">Essa</rs> sarà sempre con voi a mezzo delle <term type="verbum" subtype="arti_visive">illustra</term>
+                        <lb facs="#z2-l13"/>zioni di questi <rs ref="coverlessListPlace.xml#Sardegna" type="real">luoghi benedetti</rs> da <persName type="fictional" ref="coverlessListPerson.xml#dio">Dio</persName> e dimenticati
+                        <lb facs="#z2-l14"/>codardamente dagli uomini. A mezzo d'una serie di
+                        <lb facs="#z2-l15"/><term type="verbum" subtype="arti_visive">bozzetti</term> caratteristici di qui: cui vivificherà la <term type="forma_letteraria" subtype="autorialita_narrativita">penna</term>
+                        <lb facs="#z2-l16"/>del vostro <persName type="real" rend="italic" ref="coverlessListPerson.xml#tegola">Tegola</persName>, del vostro <persName type="real" rend="italic" ref="coverlessListPerson.xml#sottoscritto">Sottoscritto</persName>, del vostro
+                        <lb facs="#z2-l17"/><persName type="real" rend="italic" ref="coverlessListPerson.xml#vincentius">Vincentius</persName>, del vostro <persName type="real" rend="italic" ref="coverlessListPerson.xml#stolberg">Stolberg</persName> - di tutti insomma
+                        <lb facs="#z2-l18"/>i vostri figli più intellettuali - che ne rimarranno i
+                        <lb facs="#z2-l19"/>collaboratori più assidui.
+                    </p>
+                    <p xml:id="p11" rend="first-line-indented"><lb facs="#z2-l20"/><rs type="publisher" ref="coverlessListOrganisation.xml#farfalla">Essa</rs> perdurerà insomma ad impersonare in <rs type="publisher" ref="coverlessListOrganisation.xml#farfalla">sè</rs>
+                        <lb facs="#z2-l21"/>tutta la vostra vitalità esuberante di <term type="verbum" subtype="studio_osservazione">pensiero</term> - tutta
+                        <lb facs="#z2-l22"/>la vostra arditezza di concepimenti - tutta la vostra
+                        <lb facs="#z2-l23"/>maschia <ref target="#giornalismoComeBattaglia">falange</ref> di caratteri...
+                    </p>
+                    <p xml:id="p12" rend="first-line-indented"><lb facs="#z2-l24"/>In una parola: parleremo a <placeName ref="coverlessListPlace.xml#MI" type="real">Milano</placeName>, ma il nostro
+                        <lb facs="#z2-l25"/>cuore batterà a <placeName ref="coverlessListPlace.xml#CA" type="real">Cagliari</placeName>: perchè il centro della vita
+                        <lb facs="#z2-l26"/>non lo si disloca: e noi la vita l'abbiamo avuta qui.
+                    </p>
+                    
+                    
+                </div>
+                
+               
+                <metamark function="sectionDivider" xml:id="far2"><lb facs="#far2f"/>*</metamark>
+
+                <div n="3" type="section"> 
+                    
+                    <p xml:id="p13" rend="first-line-indented"><lb facs="#z3-l1"/><ref target="#giornalismoComeBattaglia">Esercito</ref> pio e gentile - simpatie vecchie e re
+                        <lb facs="#z3-l2"/>centi - amici d'allora e d'adesso - <ref target="#giornalismoComeBattaglia">battaglieri</ref> della
+                        <cb n="2" xml:id="col_2-p.90"/>
+                        <lb facs="#z4-l1"/>penna di qualunque partito, ma tutti giurati alla
+                        <lb facs="#z4-l2"/><ref target="#giornalismoComeBattaglia">bandiera</ref> del bello, del <term type="verbum" subtype="vero_verita">vero</term>, del grande - qua tutti
+                        <lb facs="#z4-l3"/>la mano. 
+                   </p>
+                    <p xml:id="p14" rend="first-line-indented"><lb facs="#z4-l4"/><ref target="#giornalismoComeBattaglia">Questa stretta muta e silenziosa ci risparmii a
+                        <lb facs="#z4-l5"/>tutti una trista <term type="forma_letteraria" subtype="genere_letterario">elegia</term> di commiato...</ref>
+                    </p>
+                    <p xml:id="p15" rend="first-line-indented"><lb facs="#z4-l6"/><q>Ah udite!?.. È la campanella di bordo che ci
+                        <lb facs="#z4-l7"/>chiama.</q>
+                    </p>
+                    <p xml:id="p16" rend="first-line-indented"><lb facs="#z4-l8"/><q>-Addio....</q>
+                    </p>
+                    <p xml:id="p17" rend="first-line-indented"><lb facs="#z4-l9"/><q>- Chi ha detto addio?</q> Il connubio delle anime
+                        <lb facs="#z4-l10"/>non ammette separazioni. I domicilii, le residenze si
+                        <lb facs="#z4-l11"/>mutano: il mistico amplesso dei <term type="verbum" subtype="studio_osservazione">pensieri</term>, delle aspi-
+                        <lb facs="#z4-l12"/>razioni, sta fermo, è incrollabile come, o <placeName ref="coverlessListPlace.xml#Sardegna" type="real">Sardegna</placeName>, i
+                        <lb facs="#z4-l13"/>tuoi scogli invano flagellati dal <placeName ref="coverlessListPlace.xml#tirreno" type="real">Tirreno</placeName> in <term type="verbum"><distinct>procella</distinct></term>.
+                    </p>
+                    <p xml:id="p18" rend="first-line-indented"><lb facs="#z4-l14"/>Dunque non addio -- arrivederci oggi, domani,
+                        <lb facs="#z4-l15"/>sempre.
+                    </p>
+                </div> 
+                   
+                <div n="4" type="section">
+                    <p xml:id="p19" rend="first-line-indented"><lb facs="#z4-l16"/><persName ref="coverlessListPerson.xml#psiche" type="fictional">Psiche</persName>
+                    </p>
+                </div>
+
+            </div>
+            
+        </body>
+    </text>
+    
+</TEI>
